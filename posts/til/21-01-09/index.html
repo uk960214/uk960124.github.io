@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Publishing a [github.io Blog] with Hugo and Github Pages - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Publishing a [github.io Blog] with Hugo and Github Pages</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-09T23:15:15&#43;09:00">2021-01-09</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#0-prerequisites"><strong>0. Prerequisites</strong></a></li>
+    <li><a href="#1-install-hugo-for-windows-10"><strong>1. Install Hugo [for Windows 10]</strong></a></li>
+    <li><a href="#2-create-2-new-repositories-on-the-github-account"><strong>2. Create 2 new repositories on the github account</strong></a></li>
+    <li><a href="#3-start-a-new-site-with-hugo-and-add-a-theme"><strong>3. Start a new site with Hugo and add a theme</strong></a></li>
+    <li><a href="#4-connect-to-github-repositories-to-pusblish-on-github-pages"><strong>4. Connect to Github repositories to pusblish on Github Pages</strong></a></li>
+    <li><a href="#1-blog-repository">1. Blog Repository</a></li>
+    <li><a href="#2-githubio-repository">2. github.io Repository</a></li>
+    <li><a href="#5-build-the-page-using-hugo-and-deploy-on-github-pages"><strong>5. Build the page using hugo and deploy on Github Pages</strong></a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<h1 id="publishing-a-githubio-blog-with-hugo-and-github-pages"><strong>Publishing a &ldquo;github.io&rdquo; Blog with Hugo and Github Pages</strong></h1>
+<h2 id="0-prerequisites"><strong>0. Prerequisites</strong></h2>
+<ul>
+<li>Github is installed (<a href="https://desktop.github.com/">Link to Github Desktop</a>)</li>
+</ul>
+<h2 id="1-install-hugo-for-windows-10"><strong>1. Install Hugo [for Windows 10]</strong></h2>
+<ol>
+<li>
+<p>Create a new folder with the name &ldquo;Hugo&rdquo; on <code>C:</code> directory.</p>
+</li>
+<li>
+<p>Inside <code>C:\Hugo</code>, create another new folder with the name &ldquo;bin&rdquo;.</p>
+</li>
+<li>
+<p>Download the latest version of Hugo for Windows (which is in .zip format) from <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a>.</p>
+</li>
+<li>
+<p>Extract the zip file into the <code>C:\Hugo\bin</code>, which was created in Step 2.</p>
+</li>
+<li>
+<p>Now the hugo.exe file is executable from this folder. However, the goal is to be able to run hugo from anywhere on the desktop. Therefore, hugo needs to be added to the Path in the Environment Variables of the desktop.
+Search for &ldquo;Environment Variables&rdquo; in the start menu&rsquo;s search. In the User variables section, double-click on Path from the list. Click &ldquo;New&rdquo; and add <code>C:\Hugo\bin</code> to the List. Click on all the okays.</p>
+</li>
+<li>
+<p>Now hugo is installed and executable from anywhere on the desktop. To check if hugo was installed correctly, turn on the command prompt or bash and type <code>hugo version</code> on the terminal.</p>
+</li>
+</ol>
+<h2 id="2-create-2-new-repositories-on-the-github-account"><strong>2. Create 2 new repositories on the github account</strong></h2>
+<p>On your Github account, create 2 new public repositories with the name &lsquo;blog&rsquo; and &lsquo;[your-account-name]/github.io&rsquo;.
+The first repository is where all the source code for the hugo will be stored, whereas the second repository will be used to actually publish the site.</p>
+<h2 id="3-start-a-new-site-with-hugo-and-add-a-theme"><strong>3. Start a new site with Hugo and add a theme</strong></h2>
+<ol>
+<li>
+<p>On the terminal type in <code>hugo new site blog</code> in order to compile a new Site.</p>
+</li>
+<li>
+<p>Pick out a theme from the <a href="https://themes.gohugo.io/">themes provided by hugo</a>.</p>
+</li>
+<li>
+<p>In order to install the theme, follow the instructions of the demo page of the theme. There are 2 ways of applying the thems to hugo using git. The first is cloning the theme repository with the code <code>$ git clone https://github.com/[theme-repo-address]</code> in <code>C:\Hugo\blog\themes</code>. The second is to create a submodule at <code>C:\Hugo\blog</code> directory by typing <code>git init</code> and <code>git submodule add https://github.com/[theme-repo-address] themes/[theme-name]</code>. The second method makes sure that updates of the theme will be applied to the compiled site. However, the second method didn&rsquo;t work for me for some reason, and this is maybe a problem to be solved in the future.</p>
+</li>
+<li>
+<p>To finish applying the theme, execute the code <code>echo 'theme=&quot;[theme-name]&quot;' &gt;&gt; config.toml</code> on the terminal.</p>
+</li>
+<li>
+<p>Before checking to see the theme has been applied correctly, create a sample content. Type in <code>hugo new posts/sample-post.md</code> on the terminal in the blog directory. Open the markdown file on an editor, and make sure that draft is set to false, since a draft will not show on the page.</p>
+</li>
+<li>
+<p>To check if everything was done correctly, execute the code <code>hugo server</code> on the terminal in the blog directory. On the message on the terminal, the address for the page will be shown (ex. http://localhost:1313/).</p>
+</li>
+</ol>
+<h2 id="4-connect-to-github-repositories-to-pusblish-on-github-pages"><strong>4. Connect to Github repositories to pusblish on Github Pages</strong></h2>
+<p>In order to use the ssh address for github, ssh keys must be added in the setting of github account. This is thoroughly explained in <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">this github doc</a>.</p>
+<h2 id="1-blog-repository">1. Blog Repository</h2>
+<p>This repository will be assigned as the remote repo for the local blog directory.</p>
+<p>In the directory <code>C:\Hugo\blog</code> execute <code>git init</code> and <code>git remote add origin [git@github.com:[your-user-name]/blog.git]</code>.</p>
+<h2 id="2-githubio-repository">2. github.io Repository</h2>
+<p>This repository will be assigned as the submodule for the local blog directory.</p>
+<p>Prior to this, in the github.io repository, at least 1 commit and a main branch has to exist in order to proceed in creating a submodule.</p>
+<ol>
+<li>
+<p>On the desktop, clone the repository by executing <code>git clone https://github.com/[your-user-name]/[your-username].github.io.git</code>.</p>
+</li>
+<li>
+<p>Move into the created directory and execute the code <code>git checkout -b main</code> to create the main branch.</p>
+</li>
+<li>
+<p>Create a simple readme by typing in <code>touch README.md</code>.</p>
+</li>
+<li>
+<p>Stage, commit and push to the repository by executing the following codes:</p>
+<p><code>git add .</code></p>
+<p><code>git commit -m &quot;adding readme&quot;</code></p>
+<p><code>git push origin main</code></p>
+</li>
+<li>
+<p>Now add the submodule. In the directory <code>C:\Hugo\blog</code> execute <code>git submodule add -b main [git@github.com:[your-user-name]/blog.git] public</code>.</p>
+<p>By doing this, when hugo rebuilds the website, this will be compiled in the public directory, which we can push to the github.io repository.</p>
+</li>
+</ol>
+<h2 id="5-build-the-page-using-hugo-and-deploy-on-github-pages"><strong>5. Build the page using hugo and deploy on Github Pages</strong></h2>
+<ol>
+<li>
+<p>In the blog directory and execute the code <code>hugo -t [theme-name]</code>.</p>
+</li>
+<li>
+<p>Move into the public directory and push to the repository by executing the following codes again:</p>
+<p><code>git add .</code></p>
+<p><code>git commit -m &quot;adding readme&quot;</code></p>
+<p><code>git push origin main</code></p>
+</li>
+<li>
+<p>On the github webpage in the github.io repository, click on the settings tab. to the bottom on the GitHub Pages section, click on the published webpage url to check the blog online.</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<h1 id="finished"><strong>Finished!</strong></h1>
+
+		</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<div class="authorbox__header">
+		<span class="authorbox__name"></span>
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/mypost/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Mypost</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
