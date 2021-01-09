@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> - My New Hugo Site</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="My New Hugo Site" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">My New Hugo Site</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title"></h1>
+			
+		</header><div class="content post__content clearfix">
+			<h1 id="201101">20.11.01</h1>
+<p>날짜: Nov 1, 2020
+내용: JS - Final Project Back End Completed
+내용 2: JS - Final Project Front and Back End Connected</p>
+<h1 id="back-end-of-final-project">Back End of Final Project</h1>
+<h2 id="profile-and-image-counter">Profile and Image Counter</h2>
+<p>Profile function returns the information of the user, given the id number. And the Image counter function accumulates every time a user submits a image on the website.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/profile/:id&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+	<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>;
+	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">found</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+	<span style="color:#a6e22e">database</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">user</span> =&gt; {
+		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>) {
+			<span style="color:#a6e22e">found</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">user</span>);
+		}
+	})
+	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">found</span>) {
+		<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">400</span>).<span style="color:#a6e22e">json</span>(<span style="color:#e6db74">&#39;not found&#39;</span>)
+	}
+})
+</code></pre></div><p>First of all, the id is passed as a parameter of profile through the URL. This is compared to the ids in the database, and when there&rsquo;s a hit, the function ends, returning the user. When the forEach loop is completed and no match has been found, it returns the status of 400.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#39;/image&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+	<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>;
+	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">found</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+	<span style="color:#a6e22e">database</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">user</span> =&gt; {
+		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>) {
+			<span style="color:#a6e22e">found</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+			<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">entries</span><span style="color:#f92672">++</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">entries</span>);
+		}
+	})
+	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">found</span>) {
+		<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">400</span>).<span style="color:#a6e22e">json</span>(<span style="color:#e6db74">&#39;not found&#39;</span>)
+	}
+})
+</code></pre></div><p>This function is triggered when the user submits an image through the page. It compares the id of the request and compares with the database. When a hit is found, the number of the &ldquo;entries&rdquo; is increased.</p>
+<h1 id="connecting-the-back-end-to-the-front-end">Connecting the Back End to the Front End</h1>
+<h2 id="connecting-the-sign-in-and-register">Connecting the Sign In and Register</h2>
+<p>To begin with, because when the two is connected, the page needs to remember the user information who is signed in. Therefore the state is modified.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {
+				<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+				<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+				<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+				<span style="color:#a6e22e">entries</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+				<span style="color:#a6e22e">joined</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+			}
+</code></pre></div><p>When the user submits a email address and password in the sign in page, the following happens. In order to receive these data, the sign in component of the front end is turned into a class and states are created.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Signin</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+	<span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+		<span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+			<span style="color:#a6e22e">signInEmail</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+			<span style="color:#a6e22e">signInPassword</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+		}
+	}
+</code></pre></div><p>And when the values of the input changes, these states change accordingly.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">onEmailChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">signInEmail</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>})
+	}
+	
+	<span style="color:#a6e22e">onPasswordChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">signInPassword</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>})
+	}
+</code></pre></div><p>And when the button is clicked, this information is sent to the back end server with the post method, where the input email and password will be compared, and when a match has been found, the user information will be sent back to the front end, which will load user to the state of the App container, and redirect to the home page.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">onSubmitSignIn</span> <span style="color:#f92672">=</span>() =&gt; {
+	<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://smart-brain-ggnai.run.goorm.io/signin&#39;</span>, {
+		<span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;post&#39;</span>,
+		<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>},
+		<span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+			<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">signInEmail</span>,
+			<span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">signInPassword</span>
+		})
+	})
+		.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+		.<span style="color:#a6e22e">then</span> (<span style="color:#a6e22e">user</span> =&gt; {
+		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>){
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">loadUser</span>(<span style="color:#a6e22e">user</span>);
+			<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">onRouteChange</span>(<span style="color:#e6db74">&#39;home&#39;</span>);
+		}
+	})
+}
+</code></pre></div><p>In the same logic, with name part included, register part is connected.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Register</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+	<span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+		<span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+			<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+			<span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+			<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+		}
+	}
+	
+	<span style="color:#a6e22e">onNameChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>})
+	}
+	
+	<span style="color:#a6e22e">onEmailChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>})
+	}
+	
+	<span style="color:#a6e22e">onPasswordChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>})
+	}
+	
+	<span style="color:#a6e22e">onSubmitSignIn</span> <span style="color:#f92672">=</span>() =&gt; {
+		<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://smart-brain-ggnai.run.goorm.io/register&#39;</span>, {
+			<span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;post&#39;</span>,
+			<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>},
+			<span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+				<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">email</span>,
+				<span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">password</span>,
+				<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">name</span>
+			})
+		})
+			.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+			.<span style="color:#a6e22e">then</span> (<span style="color:#a6e22e">user</span> =&gt; {
+			<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">user</span>){
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">loadUser</span>(<span style="color:#a6e22e">user</span>)
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">onRouteChange</span>(<span style="color:#e6db74">&#39;home&#39;</span>);
+			}
+		})
+	}
+</code></pre></div><h2 id="connecting-entry-submits-to-rank">Connecting Entry Submits to Rank</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">onButtonSubmit</span> <span style="color:#f92672">=</span> () =&gt; {
+	<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({<span style="color:#a6e22e">imageUrl</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">input</span>})
+	<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">models</span>
+		.<span style="color:#a6e22e">predict</span>(
+		<span style="color:#e6db74">&#39;c0c0ac362b03416da06ab3fa36fb58e3&#39;</span>,
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">input</span>)
+	.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">response</span>) {
+			<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://smart-brain-ggnai.run.goorm.io/image&#39;</span>, {
+				<span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;put&#39;</span>,
+				<span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>},
+				<span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+					<span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>
+				})
+			})
+			.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt;<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+			.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">count</span> =&gt; {
+				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>(Object.<span style="color:#a6e22e">assign</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">user</span>, { <span style="color:#a6e22e">entries</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">count</span> }))
+			})
+		}
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">displayFaceBox</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">calculateFaceLocation</span>(<span style="color:#a6e22e">response</span>))
+	})
+	
+	.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>));
+}
+</code></pre></div><p>Like above, when the image submit button is clicked and it is processed through the face detect model, the user id in the state is sent to the back end through image URL, which will increase the entry count in the back end. Then this is returned to the front end, where it will also change the state in the front end as well, which will also be taken into account in the page rank display.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Rank</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">entries</span> }) =&gt; {
+	<span style="color:#66d9ef">return</span> (
+		&lt;<span style="color:#f92672">div</span>&gt;
+			&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;white f3&#39;</span>&gt;
+				{ <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, your entry count is...`</span> }
+			&lt;/<span style="color:#f92672">div</span>&gt;
+			&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;white f1&#39;</span>&gt;
+				{ <span style="color:#a6e22e">entries</span> }
+			&lt;/<span style="color:#f92672">div</span>&gt;
+		&lt;/<span style="color:#f92672">div</span>&gt;
+	)
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Rank</span>
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 My New Hugo Site.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
