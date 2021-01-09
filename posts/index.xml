@@ -13,7 +13,7 @@
       <pubDate>Sat, 09 Jan 2021 23:15:15 +0900</pubDate>
       
       <guid>http://uk960214.github.io/posts/til/21-01-09/</guid>
-      <description>Publishing a &amp;ldquo;github.io&amp;rdquo; Blog with Hugo and Github Pages 0. Prerequisites  Github is installed (Link to Github Desktop)  1. Install Hugo [for Windows 10]   Create a new folder with the name &amp;ldquo;Hugo&amp;rdquo; on C: directory.
+      <description>0. Prerequisites  Github is installed (Link to Github Desktop)  1. Install Hugo [for Windows 10]   Create a new folder with the name &amp;ldquo;Hugo&amp;rdquo; on C: directory.
   Inside C:\Hugo, create another new folder with the name &amp;ldquo;bin&amp;rdquo;.
   Download the latest version of Hugo for Windows (which is in .zip format) from Hugo Releases.
   Extract the zip file into the C:\Hugo\bin, which was created in Step 2.</description>
@@ -27,15 +27,6 @@
       <guid>http://uk960214.github.io/posts/mypost/</guid>
       <description>Hahahahaha
 console.log(&amp;#39;success&amp;#39;) </description>
-    </item>
-    
-    <item>
-      <title>Mypost</title>
-      <link>http://uk960214.github.io/posts/til-21-01-09/</link>
-      <pubDate>Sat, 09 Jan 2021 17:06:11 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/posts/til-21-01-09/</guid>
-      <description></description>
     </item>
     
     <item>
