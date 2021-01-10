@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jan 2021 23:15:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 00:07:50 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enlightenment of the Day 21.01.11</title>
+      <link>http://uk960214.github.io/posts/enlightenment-21-01-11/</link>
+      <pubDate>Mon, 11 Jan 2021 00:07:50 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/enlightenment-21-01-11/</guid>
+      <description>Situation Solving the following task on Programmers (Link) Task  An interger array &amp;lsquo;numbers&amp;rsquo; is given. Create a function that returns an array consisting of sums of 2 numbers of different index sorted in an ascending order.
+ Resitrictions   The length of &amp;lsquo;numbers&amp;rsquo; is between 2 to 100. All of the numbers of are bewtween 0 to 100.   Input/Output example     numbers result     [2, 1, 3, 4, 1] [2, 3, 4, 5, 6, 7]   [5, 0, 2, 7] [2, 5, 7, 9, 12]     My Approach to the Solution   Initially    Logic Sort the input array in ascending order =&amp;gt; loop through the array using forEach =&amp;gt; in each iteration, map the array, adding the current value to the array =&amp;gt; add all that to a result array =&amp;gt; using Set, pick out unique values</description>
+    </item>
+    
     <item>
       <title>Publishing a [github.io Blog] with Hugo and Github Pages</title>
       <link>http://uk960214.github.io/posts/til/21-01-09/</link>
@@ -17,27 +27,6 @@
   Inside C:\Hugo, create another new folder with the name &amp;ldquo;bin&amp;rdquo;.
   Download the latest version of Hugo for Windows (which is in .zip format) from Hugo Releases.
   Extract the zip file into the C:\Hugo\bin, which was created in Step 2.</description>
-    </item>
-    
-    <item>
-      <title>Mypost</title>
-      <link>http://uk960214.github.io/posts/mypost/</link>
-      <pubDate>Sat, 09 Jan 2021 17:06:11 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/posts/mypost/</guid>
-      <description>Hahahahaha
-console.log(&amp;#39;success&amp;#39;) </description>
-    </item>
-    
-    <item>
-      <title>TIL 20.11.01</title>
-      <link>http://uk960214.github.io/posts/til-20-11-01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://uk960214.github.io/posts/til-20-11-01/</guid>
-      <description>20.11.01 날짜: Nov 1, 2020 내용: JS - Final Project Back End Completed 내용 2: JS - Final Project Front and Back End Connected
-Back End of Final Project Profile and Image Counter Profile function returns the information of the user, given the id number. And the Image counter function accumulates every time a user submits a image on the website.
-app.get(&amp;#39;/profile/:id&amp;#39;, (req, res) =&amp;gt; { const { id } = req.</description>
     </item>
     
   </channel>
