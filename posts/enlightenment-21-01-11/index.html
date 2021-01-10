@@ -89,7 +89,9 @@
 </li>
 </ul>
 <blockquote>
-<p><strong>Logic</strong> <!-- raw HTML omitted --> <code>Sort the input array in ascending order</code> =&gt; <code>loop through the array using forEach</code> =&gt; <code>in each iteration, map the array, adding the current value to the array</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code></p>
+<p><strong>Logic</strong>
+<!-- raw HTML omitted -->
+<code>Sort the input array in ascending order</code> =&gt; <code>loop through the array using forEach</code> =&gt; <code>in each iteration, map the array, adding the current value to the array</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code></p>
 </blockquote>
 <p>Initially at this point, I thought using the map method and using Set to create an array of unique values was the crucial point of the solution.</p>
 <p>However, even after it passed the example inputs of the above, during the real evaluation, 7 out of 9 test cases turned out to be a failure.</p>
@@ -102,14 +104,18 @@
 </ul>
 <p>At this point, I thought it had to be the map method, which wasn&rsquo;t working for me in the way I wanted to. So I simply turned to using nested for loop.</p>
 <blockquote>
-<p><strong>Logic</strong> <!-- raw HTML omitted --> <code>Sort the input array in ascending order</code> =&gt; <code>loop through the array using for</code> =&gt; <code>in each iteration, loop again using for and add the current value to all the following elements</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code></p>
+<p><strong>Logic</strong>
+<!-- raw HTML omitted -->
+<code>Sort the input array in ascending order</code> =&gt; <code>loop through the array using for</code> =&gt; <code>in each iteration, loop again using for and add the current value to all the following elements</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code></p>
 </blockquote>
 <p>But (surprise, surprise!) it DIDN&rsquo;T WORK.</p>
 <!-- raw HTML omitted -->
 <h1 id="the-actual-problem">The Actual Problem</h1>
 <p>Since all of my other attempts failed tragically, the only thing left to be altered was the sort. I thought that maybe sorting the array in the beginning is a bad idea. Maybe, I thought, if the array was sorted in the end, it won&rsquo;t be messed up.</p>
 <blockquote>
-<p><strong>Logic</strong> <!-- raw HTML omitted --> <code>loop through the array using for</code> =&gt; <code>in each iteration, loop again using for and add the current value to all the following elements</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code> =&gt; <em><strong><code>Sort the input array in ascending order</code></strong></em></p>
+<p><strong>Logic</strong>
+<!-- raw HTML omitted -->
+<code>loop through the array using for</code> =&gt; <code>in each iteration, loop again using for and add the current value to all the following elements</code> =&gt; <code>add all that to a result array</code> =&gt; <code>using Set, pick out unique values</code> =&gt; <em><strong><code>Sort the input array in ascending order</code></strong></em></p>
 </blockquote>
 <p>This also didn&rsquo;t turn out as I expected, but something stranged showed up while checking the example inputs. &lsquo;12&rsquo; was positioned in the beginning of the array, instead of at the very end.</p>
 <!-- raw HTML omitted -->
@@ -128,7 +134,7 @@ if I only had put in the compare function in the sort method.</p>
       <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">+</span><span style="color:#a6e22e">numbers</span>[<span style="color:#a6e22e">j</span>])
     }
   }
-  
+
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">result</span>)).<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span>)
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">answer</span>
 }
