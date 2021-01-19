@@ -3,7 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://uk960214.github.io/tags/array/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/categories/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/categories/enlightenment/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://uk960214.github.io/posts/enlightenment-21-01-11/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/frontend/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/javascript/</loc>
     <lastmod>2021-01-11T00:07:50+09:00</lastmod>
   </url>
   
@@ -13,8 +38,48 @@
   </url>
   
   <url>
+    <loc>http://uk960214.github.io/tags/map/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://uk960214.github.io/posts/</loc>
     <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/problem-solving/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/</loc>
+    <lastmod>2021-01-11T00:07:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/blog/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/developer/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/github-pages/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/hugo/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/publish/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
   </url>
   
   <url>
@@ -23,11 +88,8 @@
   </url>
   
   <url>
-    <loc>http://uk960214.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://uk960214.github.io/tags/</loc>
+    <loc>http://uk960214.github.io/categories/til/</loc>
+    <lastmod>2021-01-09T23:15:15+09:00</lastmod>
   </url>
   
 </urlset>

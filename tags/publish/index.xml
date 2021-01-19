@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publish on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/publish/</link>
+    <description>Recent content in Publish on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jan 2021 23:15:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/publish/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing a [github.io Blog] with Hugo and Github Pages</title>
+      <link>http://uk960214.github.io/posts/til/21-01-09/</link>
+      <pubDate>Sat, 09 Jan 2021 23:15:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-01-09/</guid>
+      <description>0. Prerequisites  Github is installed (Link to Github Desktop)  1. Install Hugo [for Windows 10]   Create a new folder with the name &amp;ldquo;Hugo&amp;rdquo; on C: directory.
+  Inside C:\Hugo, create another new folder with the name &amp;ldquo;bin&amp;rdquo;.
+  Download the latest version of Hugo for Windows (which is in .zip format) from Hugo Releases.
+  Extract the zip file into the C:\Hugo\bin, which was created in Step 2.</description>
+    </item>
+    
+  </channel>
+</rss>
