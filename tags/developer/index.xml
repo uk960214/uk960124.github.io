@@ -6,7 +6,17 @@
     <description>Recent content in Developer on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jan 2021 23:15:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jan 2021 01:14:10 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using C to Identify Valid Credit Card Numbers</title>
+      <link>http://uk960214.github.io/posts/til/21-01-20/</link>
+      <pubDate>Wed, 20 Jan 2021 01:14:10 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-01-20/</guid>
+      <description>Problem Create a program that uses Luhn&amp;rsquo;s Algorithm to identify if the input number is a valid credit card number for AMEX, MASTERCARD, and VISA. Breaking Down the Problem Basic Characteristics of Credit Card Numbers   Luhn&amp;rsquo;s Algorithm Not only does the number have to fit the requirements above, it also needs to be validated through Luhn&amp;rsquo;s Algorithm which is as follows:
+  My Solution Logical Steps  Get input Number from User (only receive valid integers) &amp;gt; Copy the Card Number twice to perform loops for Step 1 and 2 &amp;gt; Loop Step 1 &amp;gt; Loop Step 2 &amp;gt; Calculate digit of number &amp;gt; Check if it passes all requirements &amp;gt; Use switch/case to identify which card  1.</description>
+    </item>
+    
     <item>
       <title>Publishing a [github.io Blog] with Hugo and Github Pages</title>
       <link>http://uk960214.github.io/posts/til/21-01-09/</link>
