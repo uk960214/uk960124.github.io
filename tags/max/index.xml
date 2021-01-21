@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>max on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/max/</link>
+    <description>Recent content in max on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jan 2021 13:58:10 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/max/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enlightenment of the Day 21.01.21</title>
+      <link>http://uk960214.github.io/posts/enlightenments/enlightenment-21-01-21/</link>
+      <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/enlightenments/enlightenment-21-01-21/</guid>
+      <description>Getting Student with Highest Score Problem 3 Students are taking a multiple choice test with 5 answer options. Without actually solving the problem, they repeat the same pattern of numbers. When fed with the answer array, return the student who scored the highest.  Requirements 1. The pattern of each student is as follows: Student 1: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2 .... Student 2: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3 .</description>
+    </item>
+    
+  </channel>
+</rss>

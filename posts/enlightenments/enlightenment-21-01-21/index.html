@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Enlightenment of the Day 21.01.21 - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Enlightenment of the Day 21.01.21</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-21T13:58:10&#43;09:00">2021-01-21</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/enlightenment/" rel="category">Enlightenment</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="getting-student-with-highest-score">Getting Student with Highest Score</h1>
+<h2 id="problem">Problem</h2>
+<pre><code>3 Students are taking a multiple choice test with 5 answer options. Without actually solving the problem, they repeat the same pattern of numbers. When fed with the answer array, return the student who scored the highest.
+</code></pre>
+<h2 id="requirements">Requirements</h2>
+<pre><code>1. The pattern of each student is as follows:
+
+  Student 1: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2 ....
+  Student 2: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3 ....
+  Student 3: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, ....
+
+2. If there is more than one student scoring the highest score, return all of them in an ascending order.
+</code></pre>
+<h2 id="my-approach">My Approach</h2>
+<p><code>Logic:</code> Generate the array for each student, in the length of the answers array length &gt; Compare each with the answer array, incrementing scores when match &gt; Compare all the scores to identify the high scorer</p>
+<h3 id="1-generating-the-array-for-student-1">1. Generating the Array for Student 1</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">problem_length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">answers</span>.<span style="color:#a6e22e">length</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">first</span> <span style="color:#f92672">=</span>[];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ele1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">problem_length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">first</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">ele1</span>)
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ele1</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>){
+    <span style="color:#a6e22e">ele1</span><span style="color:#f92672">++</span>
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">ele1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+  };
+};
+</code></pre></div><h3 id="2-generating-the-array-for-student-2">2. Generating the Array for Student 2</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">second</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ele2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">problem_length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">j</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#a6e22e">second</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">second</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">ele2</span>)
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ele2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+      <span style="color:#a6e22e">ele2</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ele2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>){
+      <span style="color:#a6e22e">ele2</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">ele2</span><span style="color:#f92672">++</span>
+    }
+  }
+}
+</code></pre></div><h3 id="3-generating-the-array-for-student-3">3. Generating the Array for Student 3</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">third</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arr3</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">k</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">k</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">problem_length</span>; <span style="color:#a6e22e">k</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">third</span>[<span style="color:#a6e22e">k</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr3</span>[<span style="color:#a6e22e">l</span>];
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">third</span>[<span style="color:#a6e22e">k</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">third</span>[<span style="color:#a6e22e">k</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]){
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">l</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>) {
+      <span style="color:#a6e22e">l</span><span style="color:#f92672">++</span>
+    } <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    }
+  }
+}
+</code></pre></div><h3 id="4-create-function-for-checking-answer">4. Create Function for Checking Answer</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">submit</span>, <span style="color:#a6e22e">answers</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">submit</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">submit</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">answers</span>[<span style="color:#a6e22e">i</span>]) {
+      <span style="color:#a6e22e">score</span><span style="color:#f92672">++</span>
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">score</span>
+}
+</code></pre></div><h3 id="5-run-check-function-get-scores">5. Run Check Function, Get Scores</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">f_score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">first</span>, <span style="color:#a6e22e">answers</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s_score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">second</span>, <span style="color:#a6e22e">answers</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">t_score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">third</span>, <span style="color:#a6e22e">answers</span>);
+</code></pre></div><h3 id="6-compare-scores-find-out-high-score">6. Compare Scores, Find out High Score</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">f_score</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">s_score</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">f_score</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">t_score</span>) {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">1</span>)
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">f_score</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">t_score</span>) {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+  }
+} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">f_score</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">s_score</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">s_score</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">t_score</span>) {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>)
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">s_score</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">t_score</span>) {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>)
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+  }
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">f_score</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">t_score</span>) {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>)
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">2</span>)
+  }
+}
+</code></pre></div><h2 id="an-ideal-solution-someone-else-proposed">An Ideal Solution Someone Else Proposed</h2>
+<p><code>Logic:</code> Create an Array, consisting of each student&rsquo;s answer patterns &gt; Loop through the answers array &gt; In each iteration, compare the answers with what each student&rsquo;s would answer (without creating the actual array) &gt; Increment scores when correct &gt; Get max &ldquo;score&rdquo; &gt; Push student to result array, when the student&rsquo;s score is the high score</p>
+<p>This Solution is way more compact, efficient and self-explanatory. Although I also thought of a similar solution, I couldn&rsquo;t go along with that, because I did not know how I would loop repeatedly through a specific length of pattern, an unknown amount of times. The answer was rather simple.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">man1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">man2</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">man3</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>];
+
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">answers</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">answers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">man1</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">man1</span>.<span style="color:#a6e22e">length</span>]) <span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">++</span>;
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">answers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">man2</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">man2</span>.<span style="color:#a6e22e">length</span>]) <span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">++</span>;
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">answers</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#a6e22e">man3</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">man3</span>.<span style="color:#a6e22e">length</span>]) <span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">++</span>;
+}
+</code></pre></div><p><code>i</code>(iteration) modulo length of pattern array, meaning the remainder of dividing the iteration by the length of the pattern, would effetively choose the exact value in the pattern as desired. This would also directly be compared with the answer array, and when the answer is correct, score count is incremented.</p>
+<p>Getting the high score and the final result array could also be very efficient using the Math.max method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">1</span>], <span style="color:#a6e22e">count</span>[<span style="color:#ae81ff">2</span>]);
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">max</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">count</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>When the max number of the score count can be found, this can be compared to each of the scores and the score&rsquo;s index plus one is the student number, which can be pushed to the answer array, when high score.</p>
+<hr>
+<p>I should probably work on my math.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/javascript/" rel="tag">Javascript</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/frontend/" rel="tag">Frontend</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/array/" rel="tag">Array</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/max/" rel="tag">max</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-01-20/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Using C to Identify Valid Credit Card Numbers</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
