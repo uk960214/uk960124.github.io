@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jan 2021 13:58:10 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 21:03:03 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm</title>
+      <link>http://uk960214.github.io/tags/algorithm/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bubble Sort</title>
+      <link>http://uk960214.github.io/tags/bubble-sort/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/bubble-sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>http://uk960214.github.io/tags/c/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS50</title>
+      <link>http://uk960214.github.io/tags/cs50/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/cs50/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>http://uk960214.github.io/tags/recursion/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tideman</title>
+      <link>http://uk960214.github.io/tags/tideman/</link>
+      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/tideman/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Array</title>
       <link>http://uk960214.github.io/tags/array/</link>
@@ -53,29 +107,11 @@
     </item>
     
     <item>
-      <title>C</title>
-      <link>http://uk960214.github.io/tags/c/</link>
-      <pubDate>Wed, 20 Jan 2021 01:14:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CS</title>
       <link>http://uk960214.github.io/tags/cs/</link>
       <pubDate>Wed, 20 Jan 2021 01:14:10 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/cs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CS50</title>
-      <link>http://uk960214.github.io/tags/cs50/</link>
-      <pubDate>Wed, 20 Jan 2021 01:14:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/cs50/</guid>
       <description></description>
     </item>
     
