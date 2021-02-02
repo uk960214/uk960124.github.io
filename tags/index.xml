@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Feb 2021 21:03:03 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Feb 2021 22:01:14 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Array</title>
+      <link>http://uk960214.github.io/tags/array/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frontend</title>
+      <link>http://uk960214.github.io/tags/frontend/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://uk960214.github.io/tags/javascript/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Problem-Solving</title>
+      <link>http://uk960214.github.io/tags/problem-solving/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/problem-solving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>refactoring</title>
+      <link>http://uk960214.github.io/tags/refactoring/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/refactoring/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Algorithm</title>
       <link>http://uk960214.github.io/tags/algorithm/</link>
@@ -62,47 +107,11 @@
     </item>
     
     <item>
-      <title>Array</title>
-      <link>http://uk960214.github.io/tags/array/</link>
-      <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/array/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>http://uk960214.github.io/tags/frontend/</link>
-      <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>http://uk960214.github.io/tags/javascript/</link>
-      <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>max</title>
       <link>http://uk960214.github.io/tags/max/</link>
       <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/max/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Problem-Solving</title>
-      <link>http://uk960214.github.io/tags/problem-solving/</link>
-      <pubDate>Thu, 21 Jan 2021 13:58:10 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/problem-solving/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Identifying the Loser from a Game of Word Chain - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Identifying the Loser from a Game of Word Chain</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-02T22:01:14&#43;09:00">2021-02-02</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="rule-of-the-game">Rule of the Game</h1>
+<p>Certain number of players present a word in turns, that begins with the letter of the last word&rsquo;s ending. For instance, if the last word was apple, the current player needs to present a word that starts with e. No word can be presented twice in the same game.</p>
+<p>Therefore the loser is <code>a. whose word presented didn't begin with the last word's ending(let's call this following the previous word)</code> or <code>b. whose word has already been presented in the game</code>.</p>
+<p>In this problem, the inputs are the number of players and an array of words they are going to present.</p>
+<h3 id="example">Example</h3>
+<blockquote>
+<p>3, [tank, kick, know, wheel, land, dream, mother, robot, tank]</p>
+<p>5, [hello, observe, effect, take, either, recognize, encourage, ensure, establish, hang, gather, refer, reference, estimate, executive]</p>
+</blockquote>
+<p>Create a function that returns an answer array of the loser, and in how many turns the game ended. If there is no loser with the array provided, return [0, 0]</p>
+<h1 id="obstacles">Obstacles</h1>
+<h2 id="1-end-the-game-if-requirements-are-met">1. End the game if requirements are met</h2>
+<p>Loop the array, until below</p>
+<pre><code>1. If the word matches any of the previous word, end game.
+2. If the word doesn't follow the previous word, end game.
+</code></pre>
+<h3 id="1-solved-by-creating-array-of-called-words-and-comparing-the-current-one">1. Solved by creating array of called words and comparing the current one</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">called</span> <span style="color:#f92672">=</span> [];
+
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">called</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>])){
+    <span style="color:#66d9ef">break</span>
+  }
+  <span style="color:#a6e22e">called</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>])
+}
+</code></pre></div><h3 id="2">2.</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">charAt</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">!=</span> <span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>)){
+      <span style="color:#66d9ef">break</span>;
+    }
+  }
+}
+</code></pre></div><h2 id="2-calculating-the-loser-and-turn">2. Calculating the loser and turn</h2>
+<hr>
+<p>I couldn&rsquo;t finish the test in time because I struggled with calculating the correct loser and turn.</p>
+<p>I thought since the index was 1 smaller than the actual turn, I had to add 1 before dividing and getting the remainder.</p>
+<p>However I later found out that by doing this, the outcome of the division needed to be broken down into cases of when the remainder is 0 (in other words the player n) and when not.</p>
+<hr>
+<h3 id="for-case-1">For Case 1.</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span>((<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>;
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">n</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">n</span>;
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> parseInt((<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">n</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><h3 id="for-case-2">For Case 2.</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span>((<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>;
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">n</span>;
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%</span> <span style="color:#a6e22e">n</span>;
+    <span style="color:#a6e22e">answer</span>[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> parseInt((<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#a6e22e">n</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+}
+</code></pre></div><hr>
+<h1 id="cleaning-the-code">Cleaning the Code</h1>
+<p>After submitting the code, I figured out that my code was very repetitve and inefficient. So with the help of other people&rsquo;s submissions, I refactored my code, with almost the same logical flow.</p>
+<h2 id="the-final-code">The Final Code</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">solution</span>(<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">words</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>];
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#f92672">!=</span> <span style="color:#a6e22e">i</span> 
+           <span style="color:#f92672">||</span> <span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">charAt</span>(<span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">!=</span> <span style="color:#a6e22e">words</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>)){
+            <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> [(<span style="color:#a6e22e">i</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">n</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, parseInt(<span style="color:#a6e22e">i</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">n</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+            <span style="color:#66d9ef">break</span>;
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">answer</span>;
+}
+</code></pre></div><p><strong>First</strong> thing I did was to merge the two different condtions into one with the or operator(<code>||</code>). In order to do this, the indexing needed to match, unlike my original code, where it checked for <code>i</code>th word for condition 1 and <code>i+1</code>th for the second condition.</p>
+<p>While fixing this, the fact that the first word will never be repeating, since there is no previous word, came into my mind. So the initial value of index was changed to 1, and the <code>i</code>th word is being checked for both conditions.</p>
+<p><strong>Second</strong> thing to be fixed was the calculation of the player and the number of turn. I first changed this to a ternary operator. However, with further consideration and reading other people&rsquo;s submission, the problem could&rsquo;ve been solved much more elegantly.</p>
+<p>If the caculation began with dividng the i with n, and adding the 1 later on, the possible outcome for the player never was 0, but only 1 through n. So this can be reduced to a single case, unlike my original code.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/javascript/" rel="tag">Javascript</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/frontend/" rel="tag">Frontend</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/array/" rel="tag">Array</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/refactoring/" rel="tag">refactoring</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/enlightenments/enlightenment-21-02-01/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Enlightenment of the Day 21.02.01</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

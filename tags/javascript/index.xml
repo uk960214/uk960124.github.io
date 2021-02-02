@@ -6,7 +6,17 @@
     <description>Recent content in Javascript on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jan 2021 13:58:10 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Feb 2021 22:01:14 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identifying the Loser from a Game of Word Chain</title>
+      <link>http://uk960214.github.io/posts/til/21-02-02/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-02-02/</guid>
+      <description>Rule of the Game Certain number of players present a word in turns, that begins with the letter of the last word&amp;rsquo;s ending. For instance, if the last word was apple, the current player needs to present a word that starts with e. No word can be presented twice in the same game.
+Therefore the loser is a. whose word presented didn&#39;t begin with the last word&#39;s ending(let&#39;s call this following the previous word) or b.</description>
+    </item>
+    
     <item>
       <title>Enlightenment of the Day 21.01.21</title>
       <link>http://uk960214.github.io/posts/enlightenments/enlightenment-21-01-21/</link>
