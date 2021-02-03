@@ -6,20 +6,11 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Feb 2021 22:01:14 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Array</title>
-      <link>http://uk960214.github.io/tags/array/</link>
-      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/array/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 03 Feb 2021 22:00:55 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Frontend</title>
       <link>http://uk960214.github.io/tags/frontend/</link>
-      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/frontend/</guid>
       <description></description>
@@ -28,7 +19,7 @@
     <item>
       <title>Javascript</title>
       <link>http://uk960214.github.io/tags/javascript/</link>
-      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/javascript/</guid>
       <description></description>
@@ -37,9 +28,27 @@
     <item>
       <title>Problem-Solving</title>
       <link>http://uk960214.github.io/tags/problem-solving/</link>
-      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/problem-solving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regex</title>
+      <link>http://uk960214.github.io/tags/regex/</link>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array</title>
+      <link>http://uk960214.github.io/tags/array/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/array/</guid>
       <description></description>
     </item>
     

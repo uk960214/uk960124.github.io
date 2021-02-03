@@ -6,7 +6,19 @@
     <description>Recent content in Javascript on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Feb 2021 22:01:14 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Feb 2021 22:00:55 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Javascript Regex] Recommending Alternative ID</title>
+      <link>http://uk960214.github.io/posts/til/21-02-03/</link>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-02-03/</guid>
+      <description>Task Requrirements The Rules for the ID  Length of the ID must be 3 to 15 characters.
+  Only alphanumeric(lowercase) characters and [ -] , [ _ ], [ . ] are allowed.
+  [ . ] can not be used at the beginning and the end, and cannot be used consecutively.
+ Seven Steps in Creating Recommended ID Step 1. Change all the uppercase letters to lowercase.</description>
+    </item>
+    
     <item>
       <title>Identifying the Loser from a Game of Word Chain</title>
       <link>http://uk960214.github.io/posts/til/21-02-02/</link>

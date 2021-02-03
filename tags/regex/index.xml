@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regex on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/regex/</link>
+    <description>Recent content in Regex on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Feb 2021 22:00:55 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Javascript Regex] Recommending Alternative ID</title>
+      <link>http://uk960214.github.io/posts/til/21-02-03/</link>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-02-03/</guid>
+      <description>Task Requrirements The Rules for the ID  Length of the ID must be 3 to 15 characters.
+  Only alphanumeric(lowercase) characters and [ -] , [ _ ], [ . ] are allowed.
+  [ . ] can not be used at the beginning and the end, and cannot be used consecutively.
+ Seven Steps in Creating Recommended ID Step 1. Change all the uppercase letters to lowercase.</description>
+    </item>
+    
+  </channel>
+</rss>
