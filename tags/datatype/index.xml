@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datatype on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/datatype/</link>
+    <description>Recent content in Datatype on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Feb 2021 22:07:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/datatype/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enlightenment of the Day 21.02.13</title>
+      <link>http://uk960214.github.io/posts/enlightenments/enlightenment-21-02-13/</link>
+      <pubDate>Mon, 15 Feb 2021 22:07:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/enlightenments/enlightenment-21-02-13/</guid>
+      <description>Handling Edge Cases in Image Filtering / Understanding Rounding of Floats in C 1. Handling Edge Cases in Image Filtering Problem Using C, create a program that apllies different filters on images. Each pixel is stored in a two dimensional array.
+Obsctacle When filtering the image with &amp;lsquo;blur&amp;rsquo; and &amp;lsquo;border&amp;rsquo; filter, for each pixel in the image, certain values of all surrounding pixels needs to be reached. However, the number of surrounding pixels vary depending on the location of the pixel, more precisely, depending on whether the pixel is in the corner, edge or the middle.</description>
+    </item>
+    
+  </channel>
+</rss>

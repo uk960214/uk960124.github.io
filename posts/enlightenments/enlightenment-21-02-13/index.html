@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Enlightenment of the Day 21.02.13 - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Enlightenment of the Day 21.02.13</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-15T22:07:15&#43;09:00">2021-02-15</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="handling-edge-cases-in-image-filtering--understanding-rounding-of-floats-in-c">Handling Edge Cases in Image Filtering / Understanding Rounding of Floats in C</h1>
+<h2 id="1-handling-edge-cases-in-image-filtering">1. Handling Edge Cases in Image Filtering</h2>
+<h2 id="problem">Problem</h2>
+<p>Using C, create a program that apllies different filters on images.
+Each pixel is stored in a two dimensional array.</p>
+<h2 id="obsctacle">Obsctacle</h2>
+<p>When filtering the image with &lsquo;blur&rsquo; and &lsquo;border&rsquo; filter, for each pixel in the image, certain values of all surrounding pixels needs to be reached. However, the number of surrounding pixels vary depending on the location of the pixel, more precisely, depending on whether the pixel is in the corner, edge or the middle. My main task here was to divide these cases and apply different algorithms to take these difference into consideration.</p>
+<h2 id="solution">Solution</h2>
+<p>My first approach was to divide cases into whether a certain pixel is a null value or not. However, I was (and still am) not sure if the type of value is <code>NULL</code>, when I select a pixel that does not exsists.</p>
+<p>The actual solution to this was quite simple. When adding the values to the caculation, I added a condition to check whether the pixel is with in the ranges of the size of the image. In other words, a term is only added to the caculation if the row value was between 0 and the height and the column value is between 0 and the width.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;</span> height <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> width)
+{
+    avgRed <span style="color:#f92672">+=</span> tempImg[i][j].rgbtRed;
+    avgGreen <span style="color:#f92672">+=</span> tempImg[i][j].rgbtGreen;
+    avgBlue <span style="color:#f92672">+=</span> tempImg[i][j].rgbtBlue;
+    count<span style="color:#f92672">++</span>;
+}
+</code></pre></div><p>In the case above i is the row value and j the height value.</p>
+<hr>
+<h2 id="2-understanding-rounding-of-floats-in-c">2. Understanding Rounding of Floats in C</h2>
+<p>Problem same as above</p>
+<h2 id="obstacle">Obstacle</h2>
+<p>When I thought I was done with the codes, the main problem I encountered after checking the answer was that my answers were just a few numbers different from the answer. This had to be a problem with rounding of the numbers. When writing the code initially, I did take this into account, and I thought I set the type to floats where needed.</p>
+<h2 id="solution-1">Solution</h2>
+<p>While solving this, I came accross the tip to maintain all the datatype of the relative numbers to float all the way to the end of the cacluation and transfer the value to an int at the very end, just before assigning the changed value. The following code was written with the solution above.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">float</span> avgRed;
+<span style="color:#66d9ef">float</span> avgGreen;
+<span style="color:#66d9ef">float</span> avgBlue;
+<span style="color:#66d9ef">int</span> count;
+
+<span style="color:#75715e">// Loop through each pixel
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; h <span style="color:#f92672">&lt;</span> height; h<span style="color:#f92672">++</span>)
+{
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> w <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; w <span style="color:#f92672">&lt;</span> width; w<span style="color:#f92672">++</span>)
+    {
+        <span style="color:#75715e">// Reset all calculation variables for each pixel
+</span><span style="color:#75715e"></span>        avgRed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        avgGreen <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        avgBlue <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+        <span style="color:#75715e">// Loop through surrounding pixels
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> h <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> h <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">++</span>)
+        {
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> w <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> w <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>; j<span style="color:#f92672">++</span>)
+            {
+                <span style="color:#75715e">// Do not add into calculation if surrounding pixel is outside of image
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;</span> height <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> width)
+                {
+                    avgRed <span style="color:#f92672">+=</span> tempImg[i][j].rgbtRed;
+                    avgGreen <span style="color:#f92672">+=</span> tempImg[i][j].rgbtGreen;
+                    avgBlue <span style="color:#f92672">+=</span> tempImg[i][j].rgbtBlue;
+                    count<span style="color:#f92672">++</span>;
+                }
+            }
+        }
+
+        <span style="color:#75715e">// Get rounded average
+</span><span style="color:#75715e"></span>        avgRed <span style="color:#f92672">=</span> round(avgRed <span style="color:#f92672">/</span> count);
+        avgGreen <span style="color:#f92672">=</span> round(avgGreen <span style="color:#f92672">/</span> count);
+        avgBlue <span style="color:#f92672">=</span> round(avgBlue <span style="color:#f92672">/</span> count);
+
+        <span style="color:#75715e">// Assign average value to image
+</span><span style="color:#75715e"></span>        image[h][w].rgbtRed <span style="color:#f92672">=</span> cap(avgRed);
+        image[h][w].rgbtGreen <span style="color:#f92672">=</span> cap(avgGreen);
+        image[h][w].rgbtBlue <span style="color:#f92672">=</span> cap(avgBlue);
+    }
+}
+</code></pre></div><p>Initially, the avg value for each color was declared as int, because I thought that there isn&rsquo;t going to be a float number assign to a color value. And therefore, in the end, where the division for average happened, I tried to do only the math in floats and directly rounded the value. This did show a very similar outcome to the answer, considering that the values were only a few numbers different. However, when corrected to the above code, the answer was checked correct.</p>
+<p>This should mean that when dealing with numbers that might be in calculation in requirement of floats, all the variables are better declared as float, instead of rounding them whenever needed.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/c/" rel="tag">C</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/datatype/" rel="tag">Datatype</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/image-filter/" rel="tag">Image Filter</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/floats/" rel="tag">Floats</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-02-03/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">[Javascript Regex] Recommending Alternative ID</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
