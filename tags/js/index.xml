@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithm on Koowoy Devs</title>
-    <link>http://uk960214.github.io/tags/algorithm/</link>
-    <description>Recent content in Algorithm on Koowoy Devs</description>
+    <title>JS on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/js/</link>
+    <description>Recent content in JS on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Mar 2021 22:22:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Mar 2021 22:22:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[JS/Problem Solving] Getting the highest possible number</title>
       <link>http://uk960214.github.io/posts/til/21-03-06/</link>
@@ -28,16 +28,6 @@ My Attemps for Solution No.1) Using Combination On first thought, I wasn&amp;rsq
  In order to get all the possible selections, the following formula is used:
 image-source
 The first part refers to all the combination that includes a certain value, and the latter part refers to all the combinations that does not include that value.</description>
-    </item>
-    
-    <item>
-      <title>Enlightenment of the Day 21.02.01</title>
-      <link>http://uk960214.github.io/posts/enlightenments/enlightenment-21-02-01/</link>
-      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/posts/enlightenments/enlightenment-21-02-01/</guid>
-      <description>Sorting and Locking Pairs for Tideman (CS50 Problem Set 3) The Original Problem Explained (Tideman)  The Problem Encountered Although with the test sets provided with the example seemed to work just fine with the code I originally wrote, when graded, it showed that my code didn&amp;rsquo;t lock the pairs correctly (meaning it didn&amp;rsquo;t lock what it was supposed to, and locked pairs where it should have skipped).
-1. Sorting Problem Instructions</description>
     </item>
     
   </channel>

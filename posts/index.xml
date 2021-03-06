@@ -6,7 +6,30 @@
     <description>Recent content in Posts on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Feb 2021 22:07:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Mar 2021 22:22:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[JS/Problem Solving] Getting the highest possible number</title>
+      <link>http://uk960214.github.io/posts/til/21-03-06/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-03-06/</guid>
+      <description>Task Requirements A number between 0 and 1,000,000 and k that is smaller than the first number is given. When k amount of digit is removed, return the highest possible number.
+My Attemps for Solution No.1) Using Combination On first thought, I wasn&amp;rsquo;t aware of how big the number could be, and came up with the idea to find all possiblities and to compare these to find the maximum value.</description>
+    </item>
+    
+    <item>
+      <title>[Sidenote/JS] Using Recursion to Get All Possible Combinations</title>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</link>
+      <pubDate>Sat, 06 Mar 2021 21:33:37 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</guid>
+      <description>The definition of combination in mathematics is as follows:
+ In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter. (from Wikipedia)
+ In order to get all the possible selections, the following formula is used:
+image-source
+The first part refers to all the combination that includes a certain value, and the latter part refers to all the combinations that does not include that value.</description>
+    </item>
+    
     <item>
       <title>Enlightenment of the Day 21.02.13</title>
       <link>http://uk960214.github.io/posts/enlightenments/enlightenment-21-02-13/</link>

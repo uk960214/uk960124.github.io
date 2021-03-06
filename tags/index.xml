@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Feb 2021 22:07:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Mar 2021 22:22:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm</title>
+      <link>http://uk960214.github.io/tags/algorithm/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Greedy</title>
+      <link>http://uk960214.github.io/tags/greedy/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/greedy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS</title>
+      <link>http://uk960214.github.io/tags/js/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Problem-Solving</title>
+      <link>http://uk960214.github.io/tags/problem-solving/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/problem-solving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combination</title>
+      <link>http://uk960214.github.io/tags/combination/</link>
+      <pubDate>Sat, 06 Mar 2021 21:33:37 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/combination/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>http://uk960214.github.io/tags/recursion/</link>
+      <pubDate>Sat, 06 Mar 2021 21:33:37 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>C</title>
       <link>http://uk960214.github.io/tags/c/</link>
@@ -40,15 +94,6 @@
       <pubDate>Mon, 15 Feb 2021 22:07:15 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/image-filter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Problem-Solving</title>
-      <link>http://uk960214.github.io/tags/problem-solving/</link>
-      <pubDate>Mon, 15 Feb 2021 22:07:15 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/problem-solving/</guid>
       <description></description>
     </item>
     
@@ -98,15 +143,6 @@
     </item>
     
     <item>
-      <title>Algorithm</title>
-      <link>http://uk960214.github.io/tags/algorithm/</link>
-      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bubble Sort</title>
       <link>http://uk960214.github.io/tags/bubble-sort/</link>
       <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
@@ -121,15 +157,6 @@
       <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/cs50/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recursion</title>
-      <link>http://uk960214.github.io/tags/recursion/</link>
-      <pubDate>Mon, 01 Feb 2021 21:03:03 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/recursion/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>[JS/Problem Solving] Getting the highest possible number - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">[JS/Problem Solving] Getting the highest possible number</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-06T22:22:39&#43;09:00">2021-03-06</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="task-requirements">Task Requirements</h1>
+<p>A <code>number</code> between 0 and 1,000,000 and <code>k</code> that is smaller than the first number is given. When <code>k</code> amount of digit is removed, return the highest possible number.</p>
+<h1 id="my-attemps-for-solution">My Attemps for Solution</h1>
+<h2 id="no1-using-combination">No.1) Using Combination</h2>
+<p>On first thought, I wasn&rsquo;t aware of how big the <code>number</code> could be, and came up with the idea to find all possiblities and to compare these to find the maximum value.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">solution</span>(<span style="color:#a6e22e">number</span>, <span style="color:#a6e22e">k</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">number</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">indexArray</span> <span style="color:#f92672">=</span> []]
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+        <span style="color:#a6e22e">indexArray</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">i</span>)
+    };
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">combination</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span>) =&gt; {
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">slice</span>();
+            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">k</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">k</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+                <span style="color:#a6e22e">temp</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">-</span> <span style="color:#a6e22e">i</span>, <span style="color:#ae81ff">1</span>)
+            }
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+            <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">current</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">max</span>
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">r</span>) <span style="color:#66d9ef">return</span>;
+        <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+            <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">count</span>]);
+            <span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+        }
+    }
+    
+    <span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">indexArray</span>, [], <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">k</span>, <span style="color:#ae81ff">0</span>)
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>;
+}
+</code></pre></div><p>It worked well with the test cases, the longest of which was only 10 digits long. When submitted, it only worked with a few cases, and the rest was either timed out or returned <code>Runtime Error</code>. Through this experience, I learned that if recursion happens to many times, it causes runtime error.</p>
+<h2 id="no2-slicing-the-number-string">No.2) Slicing the Number String</h2>
+<p>While struggling I came across a few discoveries, one of which was that the numbers that needs to be removed are those that are smaller than the follwing number. Using Loop, whenever the above case was encountered, the loop breaks, while creating a new number using slice to slice all the numbers before and after the removed number. However, this code still wasn&rsquo;t efficient enough for certain cases.</p>
+<h2 id="no3-using-index-and-string-concatenation">No.3) Using Index and String Concatenation</h2>
+<p>With the help of the Q&amp;A section, I came across a totally different approach, which is getting the largest value digit by digit. This is put in another word, a totally reversed approach.</p>
+<h3 id="the-logic">The Logic</h3>
+<p>When selecting the largest number for each digit, what matters the most is leaving the minimum amount of numbers as it is, and selecting the largest from the rest of the numbers.
+Starting from the very beginning of the number we want to create, we select the largest number from the number set to take the place. However, this value cannot be in the index, where when this is selected, the numbers behind it does not suffice to fill the neccessary digits. Therefore, when one tries to create a 6 digit number from a originally 10 digit number, the first digit needs to be selected from the first five numbers. This is than done the same for all the digits.</p>
+<h3 id="code">Code</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">solution</span>(<span style="color:#a6e22e">number</span>, <span style="color:#a6e22e">k</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">digits</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">number</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">k</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">src_start</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">src_end</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">number</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">digits</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+
+    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">digits</span>) {
+        <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">src_start</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">src_end</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">number</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>) {
+                <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+                <span style="color:#a6e22e">src_start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">break</span>;
+            }
+            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">number</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">target</span>){
+                <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">number</span>[<span style="color:#a6e22e">i</span>];
+                <span style="color:#a6e22e">src_start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+            }
+        }
+
+        <span style="color:#a6e22e">answer</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">target</span>;
+        <span style="color:#a6e22e">src_end</span><span style="color:#f92672">++</span>;
+    }
+</code></pre></div><h3 id="explanation">Explanation</h3>
+<p>In order to restrict the source of numbers, from which to select from, I used the start and end variables. Until the answer string is long as the desired digits, the loop is repeated. In this loop, from the restricted pool, an maximum number is selected. If the indicator encounters 9, which is the largest number possible, the loop stops (Optimization). When the largest number is selected, the starting index for the source pool is assigned as index of the number plus one. The end index is pushed one, since a digit is selected, and therefore one less digit is needed.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/js/" rel="tag">JS</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/algorithm/" rel="tag">Algorithm</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/greedy/" rel="tag">Greedy</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/sidenote/sidenote_21.03.06/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">[Sidenote/JS] Using Recursion to Get All Possible Combinations</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

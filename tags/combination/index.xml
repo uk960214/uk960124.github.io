@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combination on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/combination/</link>
+    <description>Recent content in Combination on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Mar 2021 21:33:37 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/combination/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Sidenote/JS] Using Recursion to Get All Possible Combinations</title>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</link>
+      <pubDate>Sat, 06 Mar 2021 21:33:37 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</guid>
+      <description>The definition of combination in mathematics is as follows:
+ In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter. (from Wikipedia)
+ In order to get all the possible selections, the following formula is used:
+image-source
+The first part refers to all the combination that includes a certain value, and the latter part refers to all the combinations that does not include that value.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>[Sidenote/JS] Using Recursion to Get All Possible Combinations - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">[Sidenote/JS] Using Recursion to Get All Possible Combinations</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-06T21:33:37&#43;09:00">2021-03-06</time></div></div>
+		</header><div class="content post__content clearfix">
+			<p>The definition of combination in mathematics is as follows:</p>
+<blockquote>
+<p>In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter. (from <a href="https://en.wikipedia.org/wiki/Combination">Wikipedia</a>)</p>
+</blockquote>
+<p>In order to get all the possible selections, the following formula is used:</p>
+<p><img src="https://t1.daumcdn.net/cfile/tistory/99D63E3359A3623122" alt="combination"></p>
+<p><a href="https://nackwon.tistory.com/55">image-source</a></p>
+<p>The first part refers to all the combination that includes a certain value, and the latter part refers to all the combinations that does not include that value. Using this notion, it is possible to create a recursive function that figures out all the possible combinations.</p>
+<h2 id="code">Code</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">combinations</span> <span style="color:#f92672">=</span> [];
+
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">combination</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span>) =&gt; {
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+        <span style="color:#a6e22e">combination</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">target</span>)
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">r</span>) <span style="color:#66d9ef">return</span>;
+    <span style="color:#66d9ef">else</span> {
+        <span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+        <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">count</span>]);
+        <span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+    }
+}
+
+<span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">indexArray</span>, [], <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">k</span>, <span style="color:#ae81ff">0</span>)
+
+}
+</code></pre></div><h2 id="explained">Explained</h2>
+<hr>
+<h3 id="variables">Variables</h3>
+<blockquote>
+<p><code>combination</code>: A result array for all the combinations to be pushed to</p>
+</blockquote>
+<blockquote>
+<p><code>array</code>: The collection in array form</p>
+</blockquote>
+<blockquote>
+<p><code>target</code>: The working array that consists of the elements that is currently being processed</p>
+</blockquote>
+<blockquote>
+<p><code>n</code>: Number of elements in the collection</p>
+</blockquote>
+<blockquote>
+<p><code>r</code>: Number of selections desired</p>
+</blockquote>
+<blockquote>
+<p><code>count</code>: Counting index to target the next element in the collection as the recursion repeats</p>
+</blockquote>
+<h3 id="base-case">Base Case</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">r</span>) <span style="color:#66d9ef">return</span>;
+</code></pre></div><p>The base case consists of two conditions. THe first one is when there isn&rsquo;t any collection left to select from. The second one is when n is smaller than r, meaning that the number that needs to be selected exceeds the number of collection to select from. In these two cases, the function returns.</p>
+<h3 id="recursion">Recursion</h3>
+<p>As explained above, the formula for getting combination consists of two parts, which can be expressed in javascript as follows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">count</span>]);
+<span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">pop</span>();
+<span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><p>The first two line refers to the former part of the equation, and the next lines the latter. This can be, however, considering that the to parts can changing places, simplified as follows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">array</span>[<span style="color:#a6e22e">count</span>]);
+<span style="color:#a6e22e">combination</span>(<span style="color:#a6e22e">array</span>, Object.<span style="color:#a6e22e">assign</span>([], <span style="color:#a6e22e">target</span>), <span style="color:#a6e22e">n</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">count</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><h3 id="adding-full-size-combination-to-result-array">Adding Full Size Combination to Result Array</h3>
+<p>When the value of r reaches 0, meaning that there is no need to select anymore, the current working combination, the target, is complete. This is therefore pushed to the result array.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#a6e22e">combination</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">target</span>)
+}
+</code></pre></div><p>[Based on Explantion and Codes of the Following Blog - <a href="https://kjwsx23.tistory.com/366">Link</a>]</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/js/" rel="tag">JS</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/algorithm/" rel="tag">Algorithm</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/combination/" rel="tag">Combination</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/recursion/" rel="tag">recursion</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/enlightenments/enlightenment-21-02-13/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Enlightenment of the Day 21.02.13</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/til/21-03-06/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">[JS/Problem Solving] Getting the highest possible number</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

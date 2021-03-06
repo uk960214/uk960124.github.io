@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greedy on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/greedy/</link>
+    <description>Recent content in Greedy on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Mar 2021 22:22:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[JS/Problem Solving] Getting the highest possible number</title>
+      <link>http://uk960214.github.io/posts/til/21-03-06/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-03-06/</guid>
+      <description>Task Requirements A number between 0 and 1,000,000 and k that is smaller than the first number is given. When k amount of digit is removed, return the highest possible number.
+My Attemps for Solution No.1) Using Combination On first thought, I wasn&amp;rsquo;t aware of how big the number could be, and came up with the idea to find all possiblities and to compare these to find the maximum value.</description>
+    </item>
+    
+  </channel>
+</rss>
