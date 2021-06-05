@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/github/</link>
+    <description>Recent content in Github on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Jun 2021 17:25:52 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Github Profile</title>
+      <link>http://uk960214.github.io/posts/til/21-06-05/</link>
+      <pubDate>Sat, 05 Jun 2021 17:25:52 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-05/</guid>
+      <description>After a long break from mending my Github, I returned and started with setting up my github profile.
+Basics In order to set up the profile page add various personal details on the profile page, a new repository is needed, with the name set up as github username. (for instance, in my case, my id is uk960214, therefore I created a repository with the name &amp;ldquo;uk960214&amp;rdquo;)
+The readme.md file on this repository will be shown in the profile page.</description>
+    </item>
+    
+  </channel>
+</rss>
