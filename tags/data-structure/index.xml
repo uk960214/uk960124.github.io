@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Structure on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/data-structure/</link>
+    <description>Recent content in Data Structure on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jun 2021 13:24:05 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TIL - CS50x Week 5 Data Structure</title>
+      <link>http://uk960214.github.io/posts/til/21-06-22/</link>
+      <pubDate>Tue, 22 Jun 2021 13:24:05 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-22/</guid>
+      <description>Until this lesson, the term &amp;ldquo;data structure&amp;rdquo; reminded me only of the &amp;ldquo;data types&amp;rdquo; that variables can have. But I learned that data structure rather referred to how multiple data is stored and accessed in different methods.
+Array Though I&amp;rsquo;ve used arrays in so many different languages, since there were a lot of simplification applied to the arrays in Javascript and Python, I only came to know of the restrictions that arrays have.</description>
+    </item>
+    
+  </channel>
+</rss>
