@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TIL of the Past: 20-10-01 - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">TIL of the Past: 20-10-01</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-23T23:31:15&#43;09:00">2021-06-23</time></div></div>
+		</header><div class="content post__content clearfix">
+			<p>For the Summer Vacation, I have decided to regularly upload the TILs I wrote last year on Notion onto the blog, for recap and archiving purposes.</p>
+<h1 id="201001">20.10.01</h1>
+<h2 id="js---advanced-arrays-and-objects--es-7-8-10">JS - Advanced Arrays and Objects / ES 7, 8, 10</h2>
+<p>The lessons for today were so wide spread, starting with the advanced functions and new features of ES5 and ES6, but these were rather similar to the one&rsquo;s that I have done last month. So it seems appropriate to start with Arrays and Objects.</p>
+<h2 id="advanced-arrays-and-objects">Advanced Arrays and Objects</h2>
+<h3 id="arraymap-arrayfilter-and-arrayreduce">array.map, array.filter and array.reduce</h3>
+<p>I actually studied this in one of the past, but this time around, it was much more compactly and thoroughly introduced.</p>
+<p>The general concept of <code>.map</code> is to loop through every element of the array and apply certain function on each element, and finally, <strong>create a new array with the newly created elements.</strong> This is the key difference with using <code>.forEach</code> on an array.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [
+  {
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;john&#34;</span>,
+    <span style="color:#a6e22e">team</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+    <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;ball&#34;</span>, <span style="color:#e6db74">&#34;book&#34;</span>, <span style="color:#e6db74">&#34;pen&#34;</span>]
+  },
+  {
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;becky&#34;</span>,
+    <span style="color:#a6e22e">team</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;blue&#34;</span>,
+    <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;tape&#34;</span>, <span style="color:#e6db74">&#34;backpack&#34;</span>, <span style="color:#e6db74">&#34;pen&#34;</span>]
+  },
+  {
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;susy&#34;</span>,
+    <span style="color:#a6e22e">team</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+    <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">55</span>,
+    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;ball&#34;</span>, <span style="color:#e6db74">&#34;eraser&#34;</span>, <span style="color:#e6db74">&#34;pen&#34;</span>]
+  },
+  {
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;tyson&#34;</span>,
+    <span style="color:#a6e22e">team</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;green&#34;</span>,
+    <span style="color:#a6e22e">score</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">items</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;book&#34;</span>, <span style="color:#e6db74">&#34;pen&#34;</span>]
+  },
+
+];
+
+<span style="color:#75715e">// using forEach
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">forEachArray</span> <span style="color:#f92672">=</span> []
+<span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">forEachArray</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">username</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;!&#39;</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">forEachArray</span>);
+
+<span style="color:#75715e">// using map
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mapArray</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">username</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mapArray</span>);
+</code></pre></div><p><code>.filter</code> is used to filter an array under certain condition.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">filterArray</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">team</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;red&#34;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">filterArray</span>);
+</code></pre></div><p><code>.reduce</code> is used mainly to get an accumulated sum of certain element in the array.</p>
+<p>I&rsquo;m not 100% sure why this could be very useful.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reduceArray</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">accumulator</span>, <span style="color:#a6e22e">user</span>) =&gt; {
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">accumulator</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">score</span>
+	}, <span style="color:#ae81ff">0</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reduceArray</span>);
+</code></pre></div><h3 id="class">Class</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>,<span style="color:#a6e22e">color</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>;
+  }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cow</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>,<span style="color:#a6e22e">color</span>){
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">color</span>)
+  }
+  <span style="color:#a6e22e">moo</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Moooo. I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> and I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shelly</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cow</span>(<span style="color:#e6db74">&#39;Shelly&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>);
+</code></pre></div><p>Creating a class wasn&rsquo;t a big problem for me, and I have gone further than this, but using <code>extends</code> to inherit, and seeing what happens in process was noteworthy.</p>
+<h2 id="newly-added-feature-of-the-latest-es-standards">Newly added feature of the latest ES standards</h2>
+<h2 id="es-8">ES 8</h2>
+<h3 id="using-padstart-and-padend-to-pad-strings">Using <code>padStart</code> and <code>padEnd</code> to pad strings</h3>
+<p>Using the above method, it is possible to add spaces (or strings) in front of or behind the targeted string.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startLine</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;     ||&lt;- Start line&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">turtle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;🐢&#39;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rabbit</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;🐇&#39;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">startLine</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">turtle</span>.<span style="color:#a6e22e">padStart</span>(<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;.&#39;</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rabbit</span>.<span style="color:#a6e22e">padStart</span>(<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;.&#39;</span>));
+<span style="color:#a6e22e">turtle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turtle</span>.<span style="color:#a6e22e">trim</span>().<span style="color:#a6e22e">padEnd</span>(<span style="color:#ae81ff">9</span>, <span style="color:#e6db74">&#39;=&#39;</span>); <span style="color:#75715e">//🐢=======
+</span></code></pre></div><h3 id="objectvalues-entries-keys"><code>Object.values</code>, <code>.entries</code>, <code>.keys</code></h3>
+<p>The above object methods are used to call certain elements of the object. as the names suggest, the values target the values, keys the keys, and entries target the key and value set.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">my</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;name&#39;</span>,
+  <span style="color:#a6e22e">is</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Rudolf&#39;</span>,
+  <span style="color:#a6e22e">the</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;raindeer&#39;</span>
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">introduction</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">obj</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">entry</span> =&gt; <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39; &#39;</span>)).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39; &#39;</span>)
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">introduction</span>) <span style="color:#75715e">//&#39;my name is Rudolf the raindeer&#39;
+</span></code></pre></div><p>The thing I missed in this solution was actually the <code>.join</code> function. This is used to join all the elements of the array, and this the parameter is what is used in between when the elements are joined.</p>
+<h2 id="es-10">ES 10</h2>
+<h3 id="flat"><code>.flat()</code></h3>
+<p>This function is used to flatten the array inside an array. Without any parameters, only one level is flattened, meaning that if there is a array within and array within an array, after using the function only the array within an array part will remain. Using the parameters, it is able to choose how many levels of flattening is desired.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// #1 Turn this array into a new array: [1,2,3,[4],[5]]. Bonus if you can do it on one line
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">2</span>],[<span style="color:#ae81ff">3</span>],[[[<span style="color:#ae81ff">4</span>]]],[[[<span style="color:#ae81ff">5</span>]]]]
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">flat</span>(<span style="color:#ae81ff">2</span>))
+</code></pre></div><h3 id="fromentries"><code>.fromEntries()</code></h3>
+<p>As practically the exact counterpart as the Object.entries method above, this function turns arrays consisting of key and values to Objects.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">//#6 Turn the below users (value is their ID number) into an array: 
+</span><span style="color:#75715e">// [ [ &#39;user1&#39;, 18273 ], [ &#39;user2&#39;, 92833 ], [ &#39;user3&#39;, 90315 ] ]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">user1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18273</span>, <span style="color:#a6e22e">user2</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">92833</span>, <span style="color:#a6e22e">user3</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90315</span> };
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">users</span>));
+
+<span style="color:#75715e">//#7 change the output array of the above to have the user&#39;s IDs multiplied by 2 
+</span><span style="color:#75715e">// Should output:[ [ &#39;user1&#39;, 36546 ], [ &#39;user2&#39;, 185666 ], [ &#39;user3&#39;, 180630 ] ]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">idTimes2</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">users</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">user</span> =&gt; [<span style="color:#a6e22e">user</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">user</span>[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>]);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">idTimes2</span>)
+
+<span style="color:#75715e">//#8 change the output array of question #7 back into an object with all the users IDs updated to their new version. 
+</span><span style="color:#75715e">// Should output: { user1: 36546, user2: 185666, user3: 180630 }
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">fromEntries</span>(<span style="color:#a6e22e">idTimes2</span>))
+</code></pre></div>
+		</div>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-06-22/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">TIL - CS50x Week 5 Data Structure</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
