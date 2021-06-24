@@ -63,6 +63,27 @@ if (!doNotTrack) {
 	<article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/til/21-06-24/" rel="bookmark">
+			Index and Search (2021 Kakao Blind Recruitment)
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-24T23:12:30&#43;09:00">2021-06-24</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Task https://programmers.co.kr/learn/courses/30/lessons/72412;
+My Solution referenced from:
+ https://velog.io/@alvin/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%88%9C%EC%9C%84-%EA%B2%80%EC%83%89-Javascript https://12bme.tistory.com/120  function solution(info, query) { let answer = []; // store every possible combination that every info can match to  let combinations = {}; const getCombinations = (arr, score, init) =&gt; { let spec = arr.join(&#39;&#39;); let value = combinations[spec]; // add score to combination object  if (value) { combinations[spec].push(score); } else { combinations[spec] = [score]; } // recursive function, to loop through every possibility  for (let i = init; i &lt; arr.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/til/21-06-24/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/til/til_of_past/20-10-01/" rel="bookmark">
 			TIL of the Past: 20-10-01
 			</a>
@@ -246,27 +267,6 @@ Therefore the loser is a. whose word presented didn't begin with the last word's
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/enlightenments/enlightenment-21-02-01/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/enlightenments/enlightenment-21-01-21/" rel="bookmark">
-			Enlightenment of the Day 21.01.21
-			</a>
-		</h2>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-01-21T13:58:10&#43;09:00">2021-01-21</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/enlightenment/" rel="category">Enlightenment</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Getting Student with Highest Score Problem 3 Students are taking a multiple choice test with 5 answer options. Without actually solving the problem, they repeat the same pattern of numbers. When fed with the answer array, return the student who scored the highest.  Requirements 1. The pattern of each student is as follows: Student 1: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2 .... Student 2: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3 .
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/enlightenments/enlightenment-21-01-21/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -294,9 +294,9 @@ Therefore the loser is a. whose word presented didn't begin with the last word's
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/til/21-06-24/">Index and Search (2021 Kakao Blind Recruitment)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/til/til_of_past/20-10-01/">TIL of the Past: 20-10-01</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/til/21-06-22/">TIL - CS50x Week 5 Data Structure</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/til/21-06-05/">Setting up Github Profile</a></li>
 		</ul>
 	</div>
 </div><div class="widget-search widget">
@@ -313,6 +313,7 @@ Therefore the loser is a. whose word presented didn't begin with the last word's
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/algorithm/" title="Algorithm">Algorithm</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/array/" title="Array">Array</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/binary-search/" title="binary search">binary search</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/blog/" title="Blog">Blog</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bubble-sort/" title="Bubble Sort">Bubble Sort</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/c/" title="C">C</a>
@@ -332,8 +333,10 @@ Therefore the loser is a. whose word presented didn't begin with the last word's
 		<a class="widget-taglist__link widget__link btn" href="/tags/image/" title="image">image</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/image-filter/" title="Image Filter">Image Filter</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/image-resizing/" title="image-resizing">image-resizing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/indexing/" title="indexing">indexing</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/javascript/" title="Javascript">Javascript</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/js/" title="JS">JS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lower-bound/" title="Lower bound">Lower bound</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/luhns-algorithm/" title="Luhn&#39;s Algorithm">Luhn&#39;s Algorithm</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/map/" title="Map">Map</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/max/" title="max">max</a>

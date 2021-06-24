@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Index and Search (2021 Kakao Blind Recruitment) - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Index and Search (2021 Kakao Blind Recruitment)</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-24T23:12:30&#43;09:00">2021-06-24</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="task">Task</h1>
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/72412;">https://programmers.co.kr/learn/courses/30/lessons/72412;</a></p>
+<h1 id="my-solution">My Solution</h1>
+<p>referenced from:</p>
+<ol>
+<li><a href="https://velog.io/@alvin/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%88%9C%EC%9C%84-%EA%B2%80%EC%83%89-Javascript">https://velog.io/@alvin/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%88%9C%EC%9C%84-%EA%B2%80%EC%83%89-Javascript</a></li>
+<li><a href="https://12bme.tistory.com/120">https://12bme.tistory.com/120</a></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">solution</span>(<span style="color:#a6e22e">info</span>, <span style="color:#a6e22e">query</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#75715e">// store every possible combination that every info can match to
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">combinations</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getCombinations</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">score</span>, <span style="color:#a6e22e">init</span>) =&gt; {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">spec</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">spec</span>];
+        
+        <span style="color:#75715e">// add score to combination object
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span>) {
+            <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">spec</span>].<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">score</span>);
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">spec</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">score</span>];
+        }
+        
+        <span style="color:#75715e">// recursive function, to loop through every possibility
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">init</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr</span>];
+            <span style="color:#a6e22e">temp</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-&#39;</span>;
+            <span style="color:#a6e22e">getCombinations</span>(<span style="color:#a6e22e">temp</span>, <span style="color:#a6e22e">score</span>, <span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+        }
+    }
+    
+    <span style="color:#75715e">// split criteria and score
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>);
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">pop</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">getCombinations</span>(<span style="color:#a6e22e">array</span>, <span style="color:#a6e22e">score</span>, <span style="color:#ae81ff">0</span>);
+    })
+    
+    <span style="color:#75715e">// sort each combination&#39;s score in ascending order to use lower bound
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">combinations</span>) {
+        <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">key</span>].<span style="color:#a6e22e">sort</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>);
+    }
+    
+    <span style="color:#75715e">// loop through query
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">x</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">query</span>) {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">q</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/ and /g</span>, <span style="color:#e6db74">&#39; &#39;</span>).<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>);
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">pop</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">q</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">match</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">combinations</span>[<span style="color:#a6e22e">q</span>];
+        
+        <span style="color:#75715e">// if the combination exists, find lower bound to get scores
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">match</span>) {
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">match</span>.<span style="color:#a6e22e">length</span>;
+            <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">start</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">end</span>) {
+                <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>((<span style="color:#a6e22e">start</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">end</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+                <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">match</span>[<span style="color:#a6e22e">mid</span>]) {
+                    <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+                } <span style="color:#66d9ef">else</span> {
+                    <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mid</span>;
+                }
+            }
+            <span style="color:#75715e">// push matching score length to answer
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">match</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">start</span>);
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">0</span>);
+        }        
+    }
+    
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">answer</span>;
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/javascript/" rel="tag">Javascript</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/indexing/" rel="tag">indexing</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/data-structure/" rel="tag">Data Structure</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/binary-search/" rel="tag">binary search</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/lower-bound/" rel="tag">Lower bound</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/til_of_past/20-10-01/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">TIL of the Past: 20-10-01</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

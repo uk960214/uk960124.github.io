@@ -3,13 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://uk960214.github.io/tags/binary-search/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/data-structure/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/posts/til/21-06-24/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/indexing/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/javascript/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://uk960214.github.io/</loc>
-    <lastmod>2021-06-23T23:31:15+09:00</lastmod>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/lower-bound/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
   </url>
   
   <url>
     <loc>http://uk960214.github.io/posts/</loc>
-    <lastmod>2021-06-23T23:31:15+09:00</lastmod>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://uk960214.github.io/tags/</loc>
+    <lastmod>2021-06-24T23:12:30+09:00</lastmod>
   </url>
   
   <url>
@@ -28,11 +63,6 @@
   </url>
   
   <url>
-    <loc>http://uk960214.github.io/tags/data-structure/</loc>
-    <lastmod>2021-06-22T13:24:05+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://uk960214.github.io/tags/hash-table/</loc>
     <lastmod>2021-06-22T13:24:05+09:00</lastmod>
   </url>
@@ -44,11 +74,6 @@
   
   <url>
     <loc>http://uk960214.github.io/tags/stack/</loc>
-    <lastmod>2021-06-22T13:24:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://uk960214.github.io/tags/</loc>
     <lastmod>2021-06-22T13:24:05+09:00</lastmod>
   </url>
   
@@ -159,11 +184,6 @@
   
   <url>
     <loc>http://uk960214.github.io/tags/frontend/</loc>
-    <lastmod>2021-02-03T22:00:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://uk960214.github.io/tags/javascript/</loc>
     <lastmod>2021-02-03T22:00:55+09:00</lastmod>
   </url>
   
