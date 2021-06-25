@@ -6,7 +6,20 @@
     <description>Recent content in CS50 on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 13:24:05 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/cs50/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 23:22:12 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/cs50/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sidenote_21.06.24</title>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21-06-24/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21-06-24/</guid>
+      <description>references:
+File
+sprintf
+Task and Solution Code From a damaged (or deleted) card data, recover original jpeg images. [details]
+My Solution #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; typedef uint8_t BYTE; int main(int argc, char *argv[]) { // Check if parameter validity  if (argc != 2) { printf(&amp;#34;Usage: ./recover image\n&amp;#34;); return 1; } // Open input file  char *infile = argv[1]; FILE *inptr = fopen(infile, &amp;#34;r&amp;#34;); if (inptr == NULL) { fprintf(stderr, &amp;#34;Could not open %s.</description>
+    </item>
+    
     <item>
       <title>TIL - CS50x Week 5 Data Structure</title>
       <link>http://uk960214.github.io/posts/til/21-06-22/</link>

@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Jun 2021 23:12:30 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 23:22:12 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>buffer</title>
+      <link>http://uk960214.github.io/tags/buffer/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/buffer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Byte</title>
+      <link>http://uk960214.github.io/tags/byte/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/byte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>http://uk960214.github.io/tags/c/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS50</title>
+      <link>http://uk960214.github.io/tags/cs50/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/cs50/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File</title>
+      <link>http://uk960214.github.io/tags/file/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sprintf</title>
+      <link>http://uk960214.github.io/tags/sprintf/</link>
+      <pubDate>Fri, 25 Jun 2021 23:22:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/sprintf/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>binary search</title>
       <link>http://uk960214.github.io/tags/binary-search/</link>
@@ -49,24 +103,6 @@
       <pubDate>Thu, 24 Jun 2021 23:12:30 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/lower-bound/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>http://uk960214.github.io/tags/c/</link>
-      <pubDate>Tue, 22 Jun 2021 13:24:05 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CS50</title>
-      <link>http://uk960214.github.io/tags/cs50/</link>
-      <pubDate>Tue, 22 Jun 2021 13:24:05 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/cs50/</guid>
       <description></description>
     </item>
     

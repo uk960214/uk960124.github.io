@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sidenote_21.06.24 - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Sidenote_21.06.24</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-25T23:22:12&#43;09:00">2021-06-25</time></div></div>
+		</header><div class="content post__content clearfix">
+			<p>references:</p>
+<p><a href="https://modoocode.com/68">File</a></p>
+<p><a href="https://jhnyang.tistory.com/314">sprintf</a></p>
+<h1 id="task-and-solution-code">Task and Solution Code</h1>
+<p>From a damaged (or deleted) card data, recover original jpeg images. <a href="https://cs50.harvard.edu/x/2021/psets/4/recover/#:~:text=submit50%20cs50/problems/2021/x/recover">[details]</a></p>
+<h2 id="my-solution">My Solution</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typedef</span> uint8_t  BYTE;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[])
+{
+    <span style="color:#75715e">// Check if parameter validity
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (argc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>)
+    {
+        printf(<span style="color:#e6db74">&#34;Usage: ./recover image</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+    }
+
+    <span style="color:#75715e">// Open input file
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>infile <span style="color:#f92672">=</span> argv[<span style="color:#ae81ff">1</span>];
+    FILE <span style="color:#f92672">*</span>inptr <span style="color:#f92672">=</span> fopen(infile, <span style="color:#e6db74">&#34;r&#34;</span>);
+    <span style="color:#66d9ef">if</span> (inptr <span style="color:#f92672">==</span> NULL)
+    {
+        fprintf(stderr, <span style="color:#e6db74">&#34;Could not open %s. </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, infile);
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+    }
+
+    BYTE buffer[<span style="color:#ae81ff">512</span>];
+    <span style="color:#66d9ef">int</span> filecount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">char</span> filename[<span style="color:#ae81ff">8</span>];
+    FILE <span style="color:#f92672">*</span>outptr;
+
+    <span style="color:#75715e">// Loop while block in the file is readable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (fread(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, inptr))
+    {
+        <span style="color:#75715e">// Write new jpeg file
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (buffer[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xff</span> <span style="color:#f92672">&amp;&amp;</span> buffer[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xd8</span> 
+            <span style="color:#f92672">&amp;&amp;</span> buffer[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xff</span> <span style="color:#f92672">&amp;&amp;</span> (buffer[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xf0</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xe0</span>)
+        {
+            <span style="color:#75715e">// If first jpeg file just open new file
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (filecount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+            {
+                sprintf(filename, <span style="color:#e6db74">&#34;%03i.jpg&#34;</span>, filecount);
+                filecount<span style="color:#f92672">++</span>;
+                outptr <span style="color:#f92672">=</span> fopen(filename, <span style="color:#e6db74">&#34;w&#34;</span>);
+                fwrite(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, outptr);
+            }
+            <span style="color:#75715e">// If jpeg file is already open, close current, open new
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">else</span>
+            {
+                fclose(outptr);
+                sprintf(filename, <span style="color:#e6db74">&#34;%03i.jpg&#34;</span>, filecount);
+                filecount<span style="color:#f92672">++</span>;
+                outptr <span style="color:#f92672">=</span> fopen(filename, <span style="color:#e6db74">&#34;w&#34;</span>);
+                fwrite(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, outptr);
+            }
+        }
+        <span style="color:#66d9ef">else</span>
+        {
+            <span style="color:#75715e">// If jpeg file is open and no new jpeg file starts, keep writing
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (outptr <span style="color:#f92672">!=</span> NULL)
+            {
+                fwrite(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, outptr);
+            }
+        }
+    }
+
+    <span style="color:#75715e">// Close all files
+</span><span style="color:#75715e"></span>    fclose(outptr);
+    fclose(inptr);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><!-- raw HTML omitted -->
+<h1 id="sidenote-1---read-and-write-files">Sidenote 1 - Read and Write Files</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span> (fread(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, inptr))
+    { 
+        ...
+    }
+</code></pre></div><p>The fread function reads the file reads the designated size of data (in this case <code>512</code> Bytes), designated number of times (in this case <code>1</code>) from an open file (in this case <code>inptr</code>) and stores it in the <code>buffer</code>. After the read, the function returns the number of items read. If the file reaches the end of file, it returns an error. Put in the while loop, the loop reads the input file block by block until the file ends.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">fwrite(<span style="color:#f92672">&amp;</span>buffer, <span style="color:#ae81ff">512</span>, <span style="color:#ae81ff">1</span>, outptr);
+</code></pre></div><p>In practically the same mechanism, the fwrite function writes the content of the buffer into the output file.</p>
+<h1 id="sidenote-2---sprintf">Sidenote 2 - sprintf</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sprintf(filename, <span style="color:#e6db74">&#34;%03i.jpg&#34;</span>, filecount);
+</code></pre></div><p><code>sprintf</code> function prints the given content into a string.</p>
+<h1 id="sidenote-3---creating-the-type-byte">Sidenote 3 - Creating the type &ldquo;BYTE&rdquo;</h1>
+<p>In order to define a type called &ldquo;BYTE&rdquo; that can be used to store a byte of data, the below method can be used.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">typedef</span> uint8_t  BYTE;
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/cs50/" rel="tag">CS50</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/c/" rel="tag">C</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/file/" rel="tag">File</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/buffer/" rel="tag">buffer</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sprintf/" rel="tag">sprintf</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/byte/" rel="tag">Byte</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-06-24/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Index and Search (2021 Kakao Blind Recruitment)</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
