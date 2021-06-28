@@ -6,7 +6,20 @@
     <description>Recent content in Stack on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jun 2021 13:24:05 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jun 2021 22:57:42 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Sidenote/JS] Using Stack for Maximum Efficiency</title>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21-06-28/</link>
+      <pubDate>Mon, 28 Jun 2021 22:57:42 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21-06-28/</guid>
+      <description>Solution Reference:
+https://programmers.co.kr/questions/17409
+Task https://programmers.co.kr/learn/courses/30/lessons/12973
+Given a string of characters, if two of the same alphabet in a row is to be deleted until there is none left, check if this possible with the given string.
+Solution function solution(s) { // Split string into array  let arr = s.split(&amp;#39;&amp;#39;); // Set temporary stack array  let temp = []; // If string length is odd number, return 0  if (arr.</description>
+    </item>
+    
     <item>
       <title>TIL - CS50x Week 5 Data Structure</title>
       <link>http://uk960214.github.io/posts/til/21-06-22/</link>

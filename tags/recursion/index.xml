@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 06 Mar 2021 21:33:37 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Sidenote/JS] Using Recursion to Get All Possible Combinations</title>
-      <link>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</link>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21-03-06/</link>
       <pubDate>Sat, 06 Mar 2021 21:33:37 +0900</pubDate>
       
-      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21.03.06/</guid>
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21-03-06/</guid>
       <description>The definition of combination in mathematics is as follows:
  In mathematics, a combination is a selection of items from a collection, such that the order of selection does not matter. (from Wikipedia)
  In order to get all the possible selections, the following formula is used:
