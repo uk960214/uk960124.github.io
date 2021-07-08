@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>svg to png on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/svg-to-png/</link>
+    <description>Recent content in svg to png on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Jul 2021 13:39:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/svg-to-png/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using SVG in Create-React-App (color/text manipulation, download as png)</title>
+      <link>http://uk960214.github.io/posts/til/21-07-08/</link>
+      <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-08/</guid>
+      <description>Introduction I was asked to build a small app that takes in user input and create a downloadable image using those inputs. The user inputs their name and three colors (using html color picker) and the result image renders according to those inputs.
+SVG After researching for different ways to manipulate images, I came across &amp;lsquo;svg&amp;rsquo;. Svg stands for &amp;lsquo;scalable vector images&amp;rsquo;, and put short, instead of saving image pixel by pixel as in other image files, svg saves &amp;lsquo;paths&amp;rsquo; of the image and &amp;lsquo;draw&amp;rsquo; this paths when called.</description>
+    </item>
+    
+  </channel>
+</rss>
