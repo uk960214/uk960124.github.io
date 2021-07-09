@@ -6,22 +6,58 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jul 2021 13:39:15 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 22:27:34 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create-React-App</title>
       <link>http://uk960214.github.io/tags/create-react-app/</link>
-      <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/create-react-app/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Deployment</title>
+      <link>http://uk960214.github.io/tags/deployment/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Front-End</title>
       <link>http://uk960214.github.io/tags/front-end/</link>
-      <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gh-pages</title>
+      <link>http://uk960214.github.io/tags/gh-pages/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/gh-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>http://uk960214.github.io/tags/github-pages/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://uk960214.github.io/tags/react/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/react/</guid>
       <description></description>
     </item>
     
@@ -31,15 +67,6 @@
       <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/image-manipulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>http://uk960214.github.io/tags/react/</link>
-      <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/react/</guid>
       <description></description>
     </item>
     
@@ -499,15 +526,6 @@
       <pubDate>Sat, 09 Jan 2021 23:15:15 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github Pages</title>
-      <link>http://uk960214.github.io/tags/github-pages/</link>
-      <pubDate>Sat, 09 Jan 2021 23:15:15 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/github-pages/</guid>
       <description></description>
     </item>
     

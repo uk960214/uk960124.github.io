@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/deployment/</link>
+    <description>Recent content in Deployment on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jul 2021 22:27:34 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying React App With Github Pages</title>
+      <link>http://uk960214.github.io/posts/til/21-07-09/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-09/</guid>
+      <description>References:Youtube Tutorial by Telmo Sampaio Create-React-App Documentation
+Although I thought the deployment part wouldn&amp;rsquo;t take that much time. But because of some minor mistakes I made in some stages, which was not explicitly explained by the create react app documentation, I had to start over a multiple times until I figured things out.
+Basic Steps as explained by the documentation 1. Add homepage field to package.json The field could be placed in order in the package.</description>
+    </item>
+    
+  </channel>
+</rss>
