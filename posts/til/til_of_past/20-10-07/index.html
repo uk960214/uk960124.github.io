@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TIL of the Past: 20-10-07 - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">TIL of the Past: 20-10-07</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-11T14:14:23&#43;09:00">2021-07-11</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h1 id="react---create-react-app">React - Create React App</h1>
+<p>Creating a react app was&hellip; harder than I expected, although <a href="http://repl.it">Repl.it</a> supported React template and even the Create React App template.</p>
+<h2 id="concept-of-react">Concept of React</h2>
+<p>With React, front end can be broken down into &ldquo;Components&rdquo;, which allows for further uses of the function later on.</p>
+<p>Literally, it means that parts of html is written in pieces in javascript form, so that it can be written more efficiently with lots more extensibility.</p>
+<h2 id="start">Start</h2>
+<p>Creating a react.js file starts with importing react on the very top of the file, which allows importing further elements to the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">Component</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+</code></pre></div><p>In React, only a single element, a chunk can be rendered or returned. For this to be possible, if there is more than a single element, these are wrapped around the <code>div</code> tag. And when using the class property of Html on react, since we are working on a js file, we need to use className instead of class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Card</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">id</span> }) =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5&#39;</span>&gt;
+      &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;robots&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">`https://robohash.org/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">?200x200`</span>} /&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;{<span style="color:#a6e22e">name</span>}&lt;/<span style="color:#f92672">h2</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;{<span style="color:#a6e22e">email</span>}&lt;/<span style="color:#f92672">p</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+</code></pre></div><p>More recent updates to React allowed this to be simplified.</p>
+<p>More on ⇒ <a href="https://blog.logrocket.com/rendering-sibling-elements-react-fragments/">https://blog.logrocket.com/rendering-sibling-elements-react-fragments/</a></p>
+<p>As in the above, properties can be passed through to be utilized across the app. (Needs further clearance)</p>
+<h2 id="create-robofriends-app">Create RoboFriends App</h2>
+<h3 id="create-card-list-using-loop">Create Card List using Loop</h3>
+<p>In order to DRY the code, instead of hard-coding all the cards with index, a card list function was created, which maps all the cards, creating an automatic loop.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CardList</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">robots</span> }) =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      {
+        <span style="color:#a6e22e">robots</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">user</span>,<span style="color:#a6e22e">i</span>) =&gt; {
+          <span style="color:#66d9ef">return</span> (
+            &lt;<span style="color:#f92672">Card</span> 
+            <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">i</span>} 
+            <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">robots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">id</span>} 
+            <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">robots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">name</span>} 
+            <span style="color:#a6e22e">email</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">robots</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">email</span>}/&gt;
+          );
+        })
+      }
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+</code></pre></div><h3 id="create-search-box-that-interacts-with-the-card-list">Create Search box that interacts with the Card List</h3>
+<p>The logic behind this is actually quite simple. When there is a change with the input box, event is triggered, which calls the onSearchChange function. This function changes the &lsquo;state&rsquo; of the app, more specifically &lsquo;searchfield&rsquo; state of the app, which is empty by default. The search field value is changed to the actual value of input that is being typed in. This searchfield state is used to create a filtered robot list, using the built in array filter function, and compares the name of the robots in the initial robot list with the search field value. And only the ones that have passed this filter is displayed on the page.</p>
+<h3 id="appjs">App.js</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">App</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#66d9ef">super</span>()
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">robots</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">robots</span>,
+      <span style="color:#a6e22e">searchfield</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+    }
+  }
+</code></pre></div><p>In order for all of the above to work, the app needs to be an object that has the constructor function of state. Notice that <code>this</code> could only be used after using <code>super()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">onSearchChange</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">searchfield</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span> })
+  }
+</code></pre></div><p>The state of the app can only be changed with <code>this.setState</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">filteredRobots</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">robots</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">robot</span> =&gt; {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">robot</span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">toLowerCase</span>().<span style="color:#a6e22e">includes</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">searchfield</span>.<span style="color:#a6e22e">toLowerCase</span>());
+    });
+    <span style="color:#66d9ef">return</span> (
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tc&#34;</span>&gt;
+          &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">RoboFriends</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+          &lt;<span style="color:#f92672">SearchBox</span> <span style="color:#a6e22e">searchChange</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">onSearchChange</span>} /&gt;
+          &lt;<span style="color:#f92672">CardList</span> <span style="color:#a6e22e">robots</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">filteredRobots</span>} /&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    ); 
+  }
+}
+
+ 
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;
+</code></pre></div><p>And each of the components need to be exported, so that it can be used outside this file.</p>
+<h3 id="searchboxjs">SearchBox.js</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SearchBox</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">searchChange</span> }) =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pa2&#39;</span>&gt;
+      &lt;<span style="color:#f92672">input</span> 
+        <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pa3 ba b--green bg-lightest-blue&#39;</span>
+        <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;search&#39;</span> 
+        <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;search robots&#39;</span>
+        <span style="color:#a6e22e">onChange</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">searchChange</span>} 
+      /&gt;
+        
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">SearchBox</span>;
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/javascript/" rel="tag">Javascript</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/react/" rel="tag">React</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/create-react-app/" rel="tag">Create-React-App</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/front-end/" rel="tag">Front End</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-07-09/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Deploy React App With Github Pages</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "koowoydevs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
