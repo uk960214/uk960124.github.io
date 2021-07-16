@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jul 2021 14:14:23 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jul 2021 22:15:22 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database</title>
+      <link>http://uk960214.github.io/tags/database/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Apps Script</title>
+      <link>http://uk960214.github.io/tags/google-apps-script/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/google-apps-script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Sheets</title>
+      <link>http://uk960214.github.io/tags/google-sheets/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/google-sheets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://uk960214.github.io/tags/react/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Create-React-App</title>
       <link>http://uk960214.github.io/tags/create-react-app/</link>
@@ -31,15 +67,6 @@
       <pubDate>Sun, 11 Jul 2021 14:14:23 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>http://uk960214.github.io/tags/react/</link>
-      <pubDate>Sun, 11 Jul 2021 14:14:23 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/react/</guid>
       <description></description>
     </item>
     

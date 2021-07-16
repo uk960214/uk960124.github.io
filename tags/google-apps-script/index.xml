@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Apps Script on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/google-apps-script/</link>
+    <description>Recent content in Google Apps Script on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Jul 2021 22:15:22 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/google-apps-script/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connecting React App to Google Sheets using Google Apps Script</title>
+      <link>http://uk960214.github.io/posts/til/21-07-16/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-16/</guid>
+      <description>Reference: For general structure - Youtube Channel Get __it Done!
+For auto increment id on Google Sheets - Stack Overflow Question
+Motivation For my react app, I wanted to create a page where I could ask for the user&amp;rsquo;s email and name, maybe for future marketing purposes. Although storing these kind of data would conventionally require a backend server and a database connected to it. However, I wanted this project to be as lightweight as possible, preferably a Front End only project.</description>
+    </item>
+    
+  </channel>
+</rss>

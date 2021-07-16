@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Connecting React App to Google Sheets using Google Apps Script - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Connecting React App to Google Sheets using Google Apps Script</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-16T22:15:22&#43;09:00">2021-07-16</time></div></div>
+		</header><div class="content post__content clearfix">
+			<h3 id="reference">Reference:</h3>
+<p>For general structure - Youtube Channel <a href="https://youtu.be/yiPnkBEHqf0">Get __it Done!</a></p>
+<p>For auto increment id on Google Sheets - Stack Overflow <a href="https://stackoverflow.com/questions/66968405/auto-increment-id-number-google-apps-script">Question</a></p>
+<h1 id="motivation">Motivation</h1>
+<p>For my react app, I wanted to create a page where I could ask for the user&rsquo;s email and name, maybe for future marketing purposes. Although storing these kind of data would conventionally require a backend server and a database connected to it. However, I wanted this project to be as lightweight as possible, preferably a Front End only project. Therefore, in search for a way to simply connect this app to a database API of sorts. The solution I found was Google Sheets and the Apps Script API.</p>
+<h1 id="process">Process</h1>
+<p>Google Sheets provides a automated access to the sheets using Apps Script, which works as a form of backend that could be used to read and write to rows in the sheet with data from outer source. When deployed, a url is created that can receive request and parse that information. Thus, when my react app sends a request of JSON to this url, Apps Script can parse this data and write it to Google sheets.</p>
+<!-- raw HTML omitted -->
+<h2 id="setting-up-google-sheets-and-apps-script">Setting Up Google Sheets and Apps Script</h2>
+<p>In my sheet I created three columns, where each would contain the primary key, name, and email. In the Apps Script of this sheet, I created a function that receives a JSON data, parses the body, and when there is valid name and email, this is written into the sheet database.</p>
+<p>For the auto incrementing id number, I used the code found on stack overflow on this <a href="https://stackoverflow.com/questions/66968405/auto-increment-id-number-google-apps-script">link</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getNextId</span>() {
+  <span style="color:#75715e">// Get properties
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">properties</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getScriptProperties</span>()
+
+  <span style="color:#75715e">// Aquire the script lock. Prevents race condition
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lock</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">LockService</span>.<span style="color:#a6e22e">getScriptLock</span>()
+  <span style="color:#a6e22e">lock</span>.<span style="color:#a6e22e">waitLock</span>(<span style="color:#ae81ff">2000</span>)
+
+  <span style="color:#75715e">// Get the saved ID and save the next value
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Properties are string so it has to convert the type
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#39;id_seq&#39;</span>) <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>)
+  <span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#39;id_seq&#39;</span>, (<span style="color:#a6e22e">id</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">toString</span>())
+
+  <span style="color:#75715e">// Release the script lock (allows other executions to continue)
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">lock</span>.<span style="color:#a6e22e">releaseLock</span>()
+
+  <span style="color:#75715e">// Return the result
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">id</span>)
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">id</span>
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doPost</span>(<span style="color:#a6e22e">e</span>) {
+  <span style="color:#75715e">// Get next ID number  
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getNextId</span>();
+
+  <span style="color:#75715e">// Get the target google sheet
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ss</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ws</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ss</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;test&#39;</span>);
+
+  <span style="color:#75715e">// Parse JSON data from request
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">body</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">postData</span>.<span style="color:#a6e22e">contents</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bodyJson</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+
+  <span style="color:#75715e">// If body data is valid, write row to database
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">bodyJson</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">bodyJson</span>.<span style="color:#a6e22e">email</span>) {
+    <span style="color:#a6e22e">ws</span>.<span style="color:#a6e22e">appendRow</span>([<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">bodyJson</span>.<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">bodyJson</span>.<span style="color:#a6e22e">email</span>]);
+  }
+}
+</code></pre></div><h2 id="deploy-app-on-app-scripts">Deploy app on App Scripts</h2>
+<p>Using the graphical interface of Apps Script, deploy the &ldquo;doPost&rdquo; App, with options selected for web app, verifying with me, and access to everyone.</p>
+<h2 id="write-function-on-react-app-that-fetches-request">Write function on react app that fetches request</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSX" data-lang="JSX"><span style="color:#a6e22e">onSendButton</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">event</span>) =&gt; {
+    <span style="color:#75715e">// Prevents from sending get request (- not sure why)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>()
+
+    <span style="color:#75715e">// Validate Email &amp; Name Input
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">validateInput</span>()) {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://script.google.com/macros/s/YOUR_APP_URL&#39;</span>;
+        <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>, {
+            <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;post&#39;</span>,
+            <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;no-cors&#39;</span>,
+            <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>},
+            <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({
+                <span style="color:#75715e">// Input data is stored as state on the react app
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">name</span>,
+                <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">email</span>,
+            })
+            <span style="color:#75715e">// After sending data, change route
+</span><span style="color:#75715e"></span>        }).<span style="color:#a6e22e">then</span>(() =&gt; {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">onRouteChange</span>(<span style="color:#e6db74">&#39;result&#39;</span>)}) 
+    }
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/react/" rel="tag">React</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/google-sheets/" rel="tag">Google Sheets</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/database/" rel="tag">Database</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/google-apps-script/" rel="tag">Google Apps Script</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/til_of_past/20-10-07/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">TIL of the Past: 20-10-07</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "koowoydevs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
