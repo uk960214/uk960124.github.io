@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deconstruction on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/deconstruction/</link>
+    <description>Recent content in Deconstruction on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jul 2021 17:49:20 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/deconstruction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Javascript] Conversion from if statement to OR expression | Deconstruction</title>
+      <link>http://uk960214.github.io/posts/til/21-07-19/</link>
+      <pubDate>Mon, 19 Jul 2021 17:49:20 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-19/</guid>
+      <description>The following themes are newly learned features of Javascript.
+Short-Circuit Evaluation and OR Expression While using the logical operators, for instance and, or, and not, there are cases where the assessment of the second value is irrelevant. For example in OR expressions, when the first value is true, the expression is true no matter the second value of the expression. In these cases, Javascript chooses not to evaluate the second value, and this is called &amp;ldquo;short-circuit evaluation&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>
