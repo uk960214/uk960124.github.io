@@ -6,7 +6,18 @@
     <description>Recent content on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jul 2021 17:49:20 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 21:48:34 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TIL of the Past: 20-10-10</title>
+      <link>http://uk960214.github.io/posts/til/til_of_past/20-10-10/</link>
+      <pubDate>Fri, 23 Jul 2021 21:48:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/til_of_past/20-10-10/</guid>
+      <description>Promise  The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+ In simple words, promise is used to process async operation, and when successful it returns a single value. It is mainly used to process data received from a different source and display on the page.
+Before promise, async operations were processed with a chain of callback functions, which, in complex cases, made the code very hard to read.</description>
+    </item>
+    
     <item>
       <title>[Javascript] Conversion from if statement to OR expression | Deconstruction</title>
       <link>http://uk960214.github.io/posts/til/21-07-19/</link>

@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jul 2021 17:49:20 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 21:48:34 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Async</title>
+      <link>http://uk960214.github.io/tags/async/</link>
+      <pubDate>Fri, 23 Jul 2021 21:48:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/async/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Asynchronous Operation</title>
+      <link>http://uk960214.github.io/tags/asynchronous-operation/</link>
+      <pubDate>Fri, 23 Jul 2021 21:48:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/asynchronous-operation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://uk960214.github.io/tags/javascript/</link>
+      <pubDate>Fri, 23 Jul 2021 21:48:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promise</title>
+      <link>http://uk960214.github.io/tags/promise/</link>
+      <pubDate>Fri, 23 Jul 2021 21:48:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/promise/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Deconstruction</title>
       <link>http://uk960214.github.io/tags/deconstruction/</link>
@@ -31,15 +67,6 @@
       <pubDate>Mon, 19 Jul 2021 17:49:20 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/function/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>http://uk960214.github.io/tags/javascript/</link>
-      <pubDate>Mon, 19 Jul 2021 17:49:20 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
