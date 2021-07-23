@@ -66,7 +66,7 @@ My Solution referenced from:
       <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
       
       <guid>http://uk960214.github.io/posts/til/21-02-03/</guid>
-      <description>Task Requrirements The Rules for the ID  Length of the ID must be 3 to 15 characters.
+      <description>Task Requirements The Rules for the ID  Length of the ID must be 3 to 15 characters.
   Only alphanumeric(lowercase) characters and [ -] , [ _ ], [ . ] are allowed.
   [ . ] can not be used at the beginning and the end, and cannot be used consecutively.
  Seven Steps in Creating Recommended ID Step 1. Change all the uppercase letters to lowercase.</description>

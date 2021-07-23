@@ -19,6 +19,154 @@ Before promise, async operations were processed with a chain of callback functio
     </item>
     
     <item>
+      <title>[Javascript] Conversion from if statement to OR expression | Deconstruction</title>
+      <link>http://uk960214.github.io/posts/til/21-07-19/</link>
+      <pubDate>Mon, 19 Jul 2021 17:49:20 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-19/</guid>
+      <description>The following themes are newly learned features of Javascript.
+Short-Circuit Evaluation and OR Expression While using the logical operators, for instance and, or, and not, there are cases where the assessment of the second value is irrelevant. For example in OR expressions, when the first value is true, the expression is true no matter the second value of the expression. In these cases, Javascript chooses not to evaluate the second value, and this is called &amp;ldquo;short-circuit evaluation&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Connecting React App to Google Sheets using Google Apps Script</title>
+      <link>http://uk960214.github.io/posts/til/21-07-16/</link>
+      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-16/</guid>
+      <description>Reference: For general structure - Youtube Channel Get __it Done!
+For auto increment id on Google Sheets - Stack Overflow Question
+Motivation For my react app, I wanted to create a page where I could ask for the user&amp;rsquo;s email and name, maybe for future marketing purposes. Although storing these kind of data would conventionally require a backend server and a database connected to it. However, I wanted this project to be as lightweight as possible, preferably a Front End only project.</description>
+    </item>
+    
+    <item>
+      <title>TIL of the Past: 20-10-07</title>
+      <link>http://uk960214.github.io/posts/til/til_of_past/20-10-07/</link>
+      <pubDate>Sun, 11 Jul 2021 14:14:23 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/til_of_past/20-10-07/</guid>
+      <description>React - Create React App Creating a react app was&amp;hellip; harder than I expected, although Repl.it supported React template and even the Create React App template.
+Concept of React With React, front end can be broken down into &amp;ldquo;Components&amp;rdquo;, which allows for further uses of the function later on.
+Literally, it means that parts of html is written in pieces in javascript form, so that it can be written more efficiently with lots more extensibility.</description>
+    </item>
+    
+    <item>
+      <title>Deploy React App With Github Pages</title>
+      <link>http://uk960214.github.io/posts/til/21-07-09/</link>
+      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-09/</guid>
+      <description>References:Youtube Tutorial by Telmo Sampaio Create-React-App Documentation
+Although I thought the deployment part wouldn&amp;rsquo;t take that much time. But because of some minor mistakes I made in some stages, which was not explicitly explained by the create react app documentation, I had to start over a multiple times until I figured things out.
+Basic Steps as explained by the documentation 1. Add homepage field to package.json The field could be placed in order in the package.</description>
+    </item>
+    
+    <item>
+      <title>Using SVG in Create-React-App (color/text manipulation, download as png)</title>
+      <link>http://uk960214.github.io/posts/til/21-07-08/</link>
+      <pubDate>Thu, 08 Jul 2021 13:39:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-07-08/</guid>
+      <description>Introduction I was asked to build a small app that takes in user input and create a downloadable image using those inputs. The user inputs their name and three colors (using html color picker) and the result image renders according to those inputs.
+SVG After researching for different ways to manipulate images, I came across &amp;lsquo;svg&amp;rsquo;. Svg stands for &amp;lsquo;scalable vector images&amp;rsquo;, and put short, instead of saving image pixel by pixel as in other image files, svg saves &amp;lsquo;paths&amp;rsquo; of the image and &amp;lsquo;draw&amp;rsquo; this paths when called.</description>
+    </item>
+    
+    <item>
+      <title>[JS/Problem Solving] Get Target Number</title>
+      <link>http://uk960214.github.io/posts/til/21-06-27/</link>
+      <pubDate>Sun, 27 Jun 2021 16:07:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-27/</guid>
+      <description>Task https://programmers.co.kr/learn/courses/30/lessons/43165
+Count how many combinations of adding and subtracting each element of the given array results the given target number.
+Solution function solution(numbers, target) { let answer = 0; let nums = [...numbers]; const tar = target; // Recursive function  const getTarget = (arr, num, count) =&amp;gt; { // Get sum at every loop  let sum = arr.reduce((a, c) =&amp;gt; a + c, 0); // If sum matches target, increase answer  if(sum === num) { answer++; } // For every item in array, change to negative value, recursion  for (let i = count; i &amp;lt; arr.</description>
+    </item>
+    
+    <item>
+      <title>TIL of the Past: 20-10-03</title>
+      <link>http://uk960214.github.io/posts/til/til_of_past/20-10-03/</link>
+      <pubDate>Sat, 26 Jun 2021 22:17:41 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/til_of_past/20-10-03/</guid>
+      <description>JavaScript - Advanced Loop Along with the for, while, do, and forEach loop, the topic in this section was the usage of for of and for in loop.
+The idea is generally similar to the one of forEach loop, but the difference of &amp;lsquo;for in&amp;rsquo; loop compared to the other two was that &amp;lsquo;for in&amp;rsquo; was enumerating, while the other two were iterating. A more thorough explanation is provided by this link, to be honest, I&amp;rsquo;m still not 100% sure.</description>
+    </item>
+    
+    <item>
+      <title>Index and Search (2021 Kakao Blind Recruitment)</title>
+      <link>http://uk960214.github.io/posts/til/21-06-24/</link>
+      <pubDate>Thu, 24 Jun 2021 23:12:30 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-24/</guid>
+      <description>Task https://programmers.co.kr/learn/courses/30/lessons/72412;
+My Solution referenced from:
+ https://velog.io/@alvin/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%88%9C%EC%9C%84-%EA%B2%80%EC%83%89-Javascript https://12bme.tistory.com/120  function solution(info, query) { let answer = []; // store every possible combination that every info can match to  let combinations = {}; const getCombinations = (arr, score, init) =&amp;gt; { let spec = arr.join(&amp;#39;&amp;#39;); let value = combinations[spec]; // add score to combination object  if (value) { combinations[spec].push(score); } else { combinations[spec] = [score]; } // recursive function, to loop through every possibility  for (let i = init; i &amp;lt; arr.</description>
+    </item>
+    
+    <item>
+      <title>TIL of the Past: 20-10-01</title>
+      <link>http://uk960214.github.io/posts/til/til_of_past/20-10-01/</link>
+      <pubDate>Wed, 23 Jun 2021 23:31:15 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/til_of_past/20-10-01/</guid>
+      <description>For the Summer Vacation, I have decided to regularly upload the TILs I wrote last year on Notion onto the blog, for recap and archiving purposes.
+20.10.01 JS - Advanced Arrays and Objects / ES 7, 8, 10 The lessons for today were so wide spread, starting with the advanced functions and new features of ES5 and ES6, but these were rather similar to the one&amp;rsquo;s that I have done last month.</description>
+    </item>
+    
+    <item>
+      <title>TIL - CS50x Week 5 Data Structure</title>
+      <link>http://uk960214.github.io/posts/til/21-06-22/</link>
+      <pubDate>Tue, 22 Jun 2021 13:24:05 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-22/</guid>
+      <description>Until this lesson, the term &amp;ldquo;data structure&amp;rdquo; reminded me only of the &amp;ldquo;data types&amp;rdquo; that variables can have. But I learned that data structure rather referred to how multiple data is stored and accessed in different methods.
+Array Though I&amp;rsquo;ve used arrays in so many different languages, since there were a lot of simplification applied to the arrays in Javascript and Python, I only came to know of the restrictions that arrays have.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Github Profile</title>
+      <link>http://uk960214.github.io/posts/til/21-06-05/</link>
+      <pubDate>Sat, 05 Jun 2021 17:25:52 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-06-05/</guid>
+      <description>After a long break from mending my Github, I returned and started with setting up my github profile.
+Basics In order to set up the profile page add various personal details on the profile page, a new repository is needed, with the name set up as github username. (for instance, in my case, my id is uk960214, therefore I created a repository with the name &amp;ldquo;uk960214&amp;rdquo;)
+The readme.md file on this repository will be shown in the profile page.</description>
+    </item>
+    
+    <item>
+      <title>[JS/Problem Solving] Getting the highest possible number</title>
+      <link>http://uk960214.github.io/posts/til/21-03-06/</link>
+      <pubDate>Sat, 06 Mar 2021 22:22:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-03-06/</guid>
+      <description>Task Requirements A number between 0 and 1,000,000 and k that is smaller than the first number is given. When k amount of digit is removed, return the highest possible number.
+My Attemps for Solution No.1) Using Combination On first thought, I wasn&amp;rsquo;t aware of how big the number could be, and came up with the idea to find all possiblities and to compare these to find the maximum value.</description>
+    </item>
+    
+    <item>
+      <title>[Javascript Regex] Recommending Alternative ID</title>
+      <link>http://uk960214.github.io/posts/til/21-02-03/</link>
+      <pubDate>Wed, 03 Feb 2021 22:00:55 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-02-03/</guid>
+      <description>Task Requirements The Rules for the ID  Length of the ID must be 3 to 15 characters.
+  Only alphanumeric(lowercase) characters and [ -] , [ _ ], [ . ] are allowed.
+  [ . ] can not be used at the beginning and the end, and cannot be used consecutively.
+ Seven Steps in Creating Recommended ID Step 1. Change all the uppercase letters to lowercase.</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Loser from a Game of Word Chain</title>
+      <link>http://uk960214.github.io/posts/til/21-02-02/</link>
+      <pubDate>Tue, 02 Feb 2021 22:01:14 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-02-02/</guid>
+      <description>Rule of the Game Certain number of players present a word in turns, that begins with the letter of the last word&amp;rsquo;s ending. For instance, if the last word was apple, the current player needs to present a word that starts with e. No word can be presented twice in the same game.
+Therefore the loser is a. whose word presented didn&#39;t begin with the last word&#39;s ending(let&#39;s call this following the previous word) or b.</description>
+    </item>
+    
+    <item>
       <title>Using C to Identify Valid Credit Card Numbers</title>
       <link>http://uk960214.github.io/posts/til/21-01-20/</link>
       <pubDate>Wed, 20 Jan 2021 01:14:10 +0900</pubDate>
