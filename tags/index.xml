@@ -6,7 +6,79 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jul 2021 21:48:34 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jul 2021 23:49:02 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django</title>
+      <link>http://uk960214.github.io/tags/django/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS</title>
+      <link>http://uk960214.github.io/tags/js/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipenv</title>
+      <link>http://uk960214.github.io/tags/pipenv/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/pipenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://uk960214.github.io/tags/python/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://uk960214.github.io/tags/react/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react-rest-framework</title>
+      <link>http://uk960214.github.io/tags/react-rest-framework/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/react-rest-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode</title>
+      <link>http://uk960214.github.io/tags/vscode/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webpack</title>
+      <link>http://uk960214.github.io/tags/webpack/</link>
+      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/webpack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Async</title>
       <link>http://uk960214.github.io/tags/async/</link>
@@ -98,15 +170,6 @@
     </item>
     
     <item>
-      <title>React</title>
-      <link>http://uk960214.github.io/tags/react/</link>
-      <pubDate>Fri, 16 Jul 2021 22:15:22 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Create-React-App</title>
       <link>http://uk960214.github.io/tags/create-react-app/</link>
       <pubDate>Sun, 11 Jul 2021 14:14:23 +0900</pubDate>
@@ -184,15 +247,6 @@
       <pubDate>Mon, 28 Jun 2021 22:57:42 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS</title>
-      <link>http://uk960214.github.io/tags/js/</link>
-      <pubDate>Mon, 28 Jun 2021 22:57:42 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/js/</guid>
       <description></description>
     </item>
     
