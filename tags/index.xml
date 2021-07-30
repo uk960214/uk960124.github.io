@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jul 2021 23:49:02 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 23:33:12 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cache</title>
+      <link>http://uk960214.github.io/tags/cache/</link>
+      <pubDate>Fri, 30 Jul 2021 23:33:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chorme</title>
+      <link>http://uk960214.github.io/tags/chorme/</link>
+      <pubDate>Fri, 30 Jul 2021 23:33:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/chorme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>http://uk960214.github.io/tags/redux/</link>
+      <pubDate>Fri, 30 Jul 2021 23:33:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/redux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Django</title>
       <link>http://uk960214.github.io/tags/django/</link>

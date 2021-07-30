@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cache on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/cache/</link>
+    <description>Recent content in Cache on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jul 2021 23:33:12 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sidenote_21.07.31</title>
+      <link>http://uk960214.github.io/posts/sidenote/sidenote_21-07-31/</link>
+      <pubDate>Fri, 30 Jul 2021 23:33:12 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/sidenote/sidenote_21-07-31/</guid>
+      <description>This is a really short note that might save loads of time When working with chrome, some things just might not work because the wrong codes that has been fixed might be saved in the cache and prevents the right code from working. Today this problem occurred when working with Redux. Make sure to get in the habit of using hard reload (ctrl + F5) when reloading in development.</description>
+    </item>
+    
+  </channel>
+</rss>
