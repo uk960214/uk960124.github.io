@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Running Test Build and Deploy with Heroku - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Running Test Build and Deploy with Heroku</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-17T16:50:35&#43;09:00">2021-08-17</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/til/" rel="category">TIL</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h2 id="reference">Reference</h2>
+<p><a href="https://www.youtube.com/watch?v=UkokhawLKDU">Heroku Webhosting for Django - Python Django Dentist Website #12</a></p>
+<p><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></p>
+<h1 id="general">General</h1>
+<ul>
+<li>
+<p><strong>guincorn:</strong> Django uses &ldquo;runserver&rdquo; as the default package to run a server during development. However, when deploying with heroku, &ldquo;<strong>gunicorn</strong>&rdquo; should be used to run a server.</p>
+</li>
+<li>
+<p><strong>whitenoise:</strong> In local environment, django is capable of searching for static files by itself. In deployment, static files are to be manually collected using &ldquo;<strong>whitenoise</strong>&rdquo;.</p>
+</li>
+<li>
+<p><strong>procfile:</strong> Procfile defines what kind of app is being deployed and what server programs to use. In this case, a django app is a &ldquo;web&rdquo; app and uses &ldquo;gunicorn&rdquo; run the server</p>
+</li>
+<li>
+<p>the Importance of <code>requirements.txt</code>: <code>requirements.txt</code> tells heroku which packages are required to run the app.</p>
+</li>
+</ul>
+<h1 id="django-secret_key분리하기-windows">Django <code>SECRET_KEY</code>분리하기 (Windows)</h1>
+<p>When a django project is created with <code>django-admin</code>, a <code>SECRET_KEY</code> is automatically created in <code>Settings.py</code>. This key is used in various security features of django, and therefore should not be made public when the project is to be deployed. However, when working as a team, files might be shared through github. Thus, the key should be separated from <code>Settings.py</code>, and stored someplace else in the local environment. There are numerous ways to do this, but when deploying with heroku, the key is best stored as a environment variable.</p>
+<p>First, the <code>SECRET_KEY</code> should be separated and be modified from</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">SECRET_KEY <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;...</span>SECRET_KEY<span style="color:#f92672">...&gt;</span>
+</code></pre></div><p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+
+SECRET_KEY <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;SECRET_KEY&#34;</span>]
+</code></pre></div><p>The second step is to set the environment variable in the Operating System.
+For Windows, this can be done in &ldquo;Edit the system environment variable&rdquo; menu.</p>
+<p>When deployed with heroku, environment variables can be edited in the dashboard&rsquo;s settings or using the CLI.</p>
+<h1 id="errors-encountered">Errors encountered</h1>
+<h2 id="problem">Problem:</h2>
+<p>Although deployed without errors, the page shows only error messages.</p>
+<h2 id="error-messages-found">Error Messages Found:</h2>
+<ol>
+<li>using <code>heroku log —tail</code>
+<ol>
+<li>status 503 &ldquo;H10 App Crashed&rdquo;</li>
+<li>during build: gunicorn → Worker failed to boot</li>
+</ol>
+</li>
+<li>abnormalities during bulid <code>git push heroku master</code>
+<ol>
+<li><code>Procfile declares types -&gt; (none)</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="cause-of-the-problem">Cause of the Problem:</h2>
+<p>The directory levels of the git repository was set incorrectly, and thus, heroku could not read the Procfile at all, meaning that it did not know how to run the server. The critical clue was seen during the build.</p>
+<pre><code>Procfile declares types -&gt; (none)
+</code></pre><p>Searching for the reason for this error, I found the below question.</p>
+<p><a href="https://stackoverflow.com/questions/6346221/what-is-the-reason-for-procfile-declares-types-none-in-heroku">What is the reason for &ldquo;Procfile declares types -&gt; (none)&rdquo; in Heroku?</a></p>
+<p><a href="https://stackoverflow.com/a/60563995">answer</a></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/django/" rel="tag">django</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/heroku/" rel="tag">Heroku</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/deployment/" rel="tag">deployment</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/static-files/" rel="tag">static files</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/sidenote/sidenote_21-07-31/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Sidenote_21.07.31</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "koowoydevs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

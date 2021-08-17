@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jul 2021 23:33:12 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Aug 2021 16:50:35 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deployment</title>
+      <link>http://uk960214.github.io/tags/deployment/</link>
+      <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>http://uk960214.github.io/tags/django/</link>
+      <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Heroku</title>
+      <link>http://uk960214.github.io/tags/heroku/</link>
+      <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static files</title>
+      <link>http://uk960214.github.io/tags/static-files/</link>
+      <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/static-files/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cache</title>
       <link>http://uk960214.github.io/tags/cache/</link>
@@ -31,15 +67,6 @@
       <pubDate>Fri, 30 Jul 2021 23:33:12 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/redux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Django</title>
-      <link>http://uk960214.github.io/tags/django/</link>
-      <pubDate>Wed, 28 Jul 2021 23:49:02 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/django/</guid>
       <description></description>
     </item>
     
@@ -211,15 +238,6 @@
       <pubDate>Sun, 11 Jul 2021 14:14:23 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/front-end/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deployment</title>
-      <link>http://uk960214.github.io/tags/deployment/</link>
-      <pubDate>Fri, 09 Jul 2021 22:27:34 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/deployment/</guid>
       <description></description>
     </item>
     
