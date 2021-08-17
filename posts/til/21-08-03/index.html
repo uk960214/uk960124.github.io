@@ -87,7 +87,7 @@ if (!doNotTrack) {
 <p>the Importance of <code>requirements.txt</code>: <code>requirements.txt</code> tells heroku which packages are required to run the app.</p>
 </li>
 </ul>
-<h1 id="django-secret_key분리하기-windows">Django <code>SECRET_KEY</code>분리하기 (Windows)</h1>
+<h1 id="django-secret_key-separation-windows">Django <code>SECRET_KEY</code> Separation (Windows)</h1>
 <p>When a django project is created with <code>django-admin</code>, a <code>SECRET_KEY</code> is automatically created in <code>Settings.py</code>. This key is used in various security features of django, and therefore should not be made public when the project is to be deployed. However, when working as a team, files might be shared through github. Thus, the key should be separated from <code>Settings.py</code>, and stored someplace else in the local environment. There are numerous ways to do this, but when deploying with heroku, the key is best stored as a environment variable.</p>
 <p>First, the <code>SECRET_KEY</code> should be separated and be modified from</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">SECRET_KEY <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;...</span>SECRET_KEY<span style="color:#f92672">...&gt;</span>
@@ -120,7 +120,7 @@ For Windows, this can be done in &ldquo;Edit the system environment variable&rdq
 <pre><code>Procfile declares types -&gt; (none)
 </code></pre><p>Searching for the reason for this error, I found the below question.</p>
 <p><a href="https://stackoverflow.com/questions/6346221/what-is-the-reason-for-procfile-declares-types-none-in-heroku">What is the reason for &ldquo;Procfile declares types -&gt; (none)&rdquo; in Heroku?</a></p>
-<p><a href="https://stackoverflow.com/a/60563995">answer</a></p>
+<p><a href="https://stackoverflow.com/a/60563995">Answer</a></p>
 
 		</div>
 		<footer class="post__footer">
