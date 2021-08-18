@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Aug 2021 16:50:35 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Aug 2021 15:21:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>http://uk960214.github.io/tags/git/</link>
+      <pubDate>Wed, 18 Aug 2021 15:21:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://uk960214.github.io/tags/github/</link>
+      <pubDate>Wed, 18 Aug 2021 15:21:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitignore</title>
+      <link>http://uk960214.github.io/tags/gitignore/</link>
+      <pubDate>Wed, 18 Aug 2021 15:21:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/gitignore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tracked files</title>
+      <link>http://uk960214.github.io/tags/tracked-files/</link>
+      <pubDate>Wed, 18 Aug 2021 15:21:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/tracked-files/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Deployment</title>
       <link>http://uk960214.github.io/tags/deployment/</link>
@@ -490,15 +526,6 @@
       <pubDate>Tue, 22 Jun 2021 13:24:05 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/tries/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>http://uk960214.github.io/tags/github/</link>
-      <pubDate>Sat, 05 Jun 2021 17:25:52 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/github/</guid>
       <description></description>
     </item>
     

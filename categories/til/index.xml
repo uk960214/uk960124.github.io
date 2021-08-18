@@ -6,7 +6,17 @@
     <description>Recent content in TIL on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Aug 2021 16:50:35 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Aug 2021 15:21:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Github] Team Project Tips, Solution when Gitignore is not Working</title>
+      <link>http://uk960214.github.io/posts/til/21-08-05/</link>
+      <pubDate>Wed, 18 Aug 2021 15:21:39 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-08-05/</guid>
+      <description>Problem Since I was using Github in cooperation for the first time, there were a few problems I have encountered with pull and merges.
+Before I pushed my working branch to Github, I should have checked whether an existing pull request exists, and if that were the case, the existing pull request should have be reviewed and merged first before I pushed my branch. This would have prevented me from facing merge conflicts after pushing to github.</description>
+    </item>
+    
     <item>
       <title>Running Test Build and Deploy with Heroku</title>
       <link>http://uk960214.github.io/posts/til/21-08-03/</link>
