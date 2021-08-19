@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loop on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/loop/</link>
+    <description>Recent content in Loop on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Aug 2021 09:55:25 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/loop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Django] Template Tag/Filter (Loop/Datetime)</title>
+      <link>http://uk960214.github.io/posts/til/21-08-06/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-08-06/</guid>
+      <description>Make the First Element of a Django Template Loop Different from Others The method of adding and removing current class with JavaScript to give different styling and action needs an extra step with django. When elements are created with loops, adding current class to one of the elements will automatically copy them into all others, unless there is a way to set the first item of the loop.
+{% for post in posts_list %} {% if forloop.</description>
+    </item>
+    
+  </channel>
+</rss>

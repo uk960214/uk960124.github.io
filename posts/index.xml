@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Aug 2021 15:21:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 09:55:25 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Django] Template Tag/Filter (Loop/Datetime)</title>
+      <link>http://uk960214.github.io/posts/til/21-08-06/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-08-06/</guid>
+      <description>Make the First Element of a Django Template Loop Different from Others The method of adding and removing current class with JavaScript to give different styling and action needs an extra step with django. When elements are created with loops, adding current class to one of the elements will automatically copy them into all others, unless there is a way to set the first item of the loop.
+{% for post in posts_list %} {% if forloop.</description>
+    </item>
+    
     <item>
       <title>[Github] Team Project Tips, Solution when Gitignore is not Working</title>
       <link>http://uk960214.github.io/posts/til/21-08-05/</link>

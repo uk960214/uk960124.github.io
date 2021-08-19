@@ -64,6 +64,28 @@ if (!doNotTrack) {
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/til/21-08-06/" rel="bookmark">
+			[Django] Template Tag/Filter (Loop/Datetime)
+			</a>
+		</h2>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-08-19T09:55:25&#43;09:00">2021-08-19</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/til/" rel="category">TIL</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Make the First Element of a Django Template Loop Different from Others The method of adding and removing current class with JavaScript to give different styling and action needs an extra step with django. When elements are created with loops, adding current class to one of the elements will automatically copy them into all others, unless there is a way to set the first item of the loop.
+{% for post in posts_list %} {% if forloop.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/til/21-08-06/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/til/21-08-03/" rel="bookmark">
 			Running Test Build and Deploy with Heroku
 			</a>
@@ -133,9 +155,9 @@ General   guincorn: Django uses &ldquo;runserver&rdquo; as the default package t
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/til/21-08-06/">[Django] Template Tag/Filter (Loop/Datetime)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/til/21-08-05/">[Github] Team Project Tips, Solution when Gitignore is not Working</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/til/21-08-03/">Running Test Build and Deploy with Heroku</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/sidenote/sidenote_21-07-31/">Sidenote_21.07.31</a></li>
 		</ul>
 	</div>
 </div><div class="widget-search widget">
@@ -170,6 +192,7 @@ General   guincorn: Django uses &ldquo;runserver&rdquo; as the default package t
 		<a class="widget-taglist__link widget__link btn" href="/tags/data-structure/" title="Data Structure">Data Structure</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/datatype/" title="Datatype">Datatype</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/datetime/" title="Datetime">Datetime</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/deconstruction/" title="Deconstruction">Deconstruction</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/deployment/" title="Deployment">Deployment</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/developer/" title="Developer">Developer</a>
@@ -201,6 +224,7 @@ General   guincorn: Django uses &ldquo;runserver&rdquo; as the default package t
 		<a class="widget-taglist__link widget__link btn" href="/tags/indexing/" title="indexing">indexing</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/javascript/" title="Javascript">Javascript</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/js/" title="JS">JS</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/loop/" title="Loop">Loop</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lower-bound/" title="Lower bound">Lower bound</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/luhns-algorithm/" title="Luhn&#39;s Algorithm">Luhn&#39;s Algorithm</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/map/" title="Map">Map</a>
@@ -227,6 +251,8 @@ General   guincorn: Django uses &ldquo;runserver&rdquo; as the default package t
 		<a class="widget-taglist__link widget__link btn" href="/tags/static-files/" title="static files">static files</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/svg/" title="svg">svg</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/svg-to-png/" title="svg to png">svg to png</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/template-filters/" title="Template Filters">Template Filters</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/template-tags/" title="Template Tags">Template Tags</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/tideman/" title="Tideman">Tideman</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/time-complexity/" title="Time Complexity">Time Complexity</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/tracked-files/" title="tracked files">tracked files</a>

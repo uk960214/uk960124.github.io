@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Aug 2021 15:21:39 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 09:55:25 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Datetime</title>
+      <link>http://uk960214.github.io/tags/datetime/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/datetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>http://uk960214.github.io/tags/django/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loop</title>
+      <link>http://uk960214.github.io/tags/loop/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Template Filters</title>
+      <link>http://uk960214.github.io/tags/template-filters/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/template-filters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Template Tags</title>
+      <link>http://uk960214.github.io/tags/template-tags/</link>
+      <pubDate>Thu, 19 Aug 2021 09:55:25 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/tags/template-tags/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Git</title>
       <link>http://uk960214.github.io/tags/git/</link>
@@ -49,15 +94,6 @@
       <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
       
       <guid>http://uk960214.github.io/tags/deployment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Django</title>
-      <link>http://uk960214.github.io/tags/django/</link>
-      <pubDate>Tue, 17 Aug 2021 16:50:35 +0900</pubDate>
-      
-      <guid>http://uk960214.github.io/tags/django/</guid>
       <description></description>
     </item>
     
