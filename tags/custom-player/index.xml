@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom Player on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/custom-player/</link>
+    <description>Recent content in Custom Player on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Aug 2021 20:07:50 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/custom-player/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[JavaScript] Custom Music Player</title>
+      <link>http://uk960214.github.io/posts/til/21-08-07/</link>
+      <pubDate>Fri, 20 Aug 2021 20:07:50 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-08-07/</guid>
+      <description>Background The audio tag from HTML provides a default music player, or more specifically the browser provides a controllable music player for audio tags. However, since this is powered by the browser, customizing the player to fit the style and need of the web page is impossible. Therefore the alternative is to create a custom music player that is connected to the original audio source.
+Code HTML &amp;lt;!-- hidden audio tag (with tachyon display-none class) --&amp;gt; &amp;lt;audio class=&amp;#34;media-player dn&amp;#34; src=&amp;#34;{{ post.</description>
+    </item>
+    
+  </channel>
+</rss>
