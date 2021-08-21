@@ -6,7 +6,17 @@
     <description>Recent content on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Aug 2021 20:07:50 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Aug 2021 21:14:53 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[JavaScript] Sending AJAX Request to Django Backend for Spotify Music Search</title>
+      <link>http://uk960214.github.io/posts/til/21-08-08/</link>
+      <pubDate>Sat, 21 Aug 2021 21:14:53 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-08-08/</guid>
+      <description>Task Create a search input and add an event listener to it in JavaScript. Whenever the search query changes, send a request to the view in the backend via url.
+Code // Function to Get Token function getCookie(name) { let cookieValue = null; if (document.cookie &amp;amp;&amp;amp; document.cookie !== &amp;#34;&amp;#34;) { const cookies = document.cookie.split(&amp;#34;;&amp;#34;); for (let i = 0; i &amp;lt; cookies.length; i++) { const cookie = cookies[i].trim(); // Does this cookie string begin with the name we want?</description>
+    </item>
+    
     <item>
       <title>[JavaScript] Custom Music Player</title>
       <link>http://uk960214.github.io/posts/til/21-08-07/</link>
