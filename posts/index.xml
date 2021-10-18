@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Koowoy Devs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Aug 2021 21:14:53 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Oct 2021 01:17:23 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Problem Solving Patterns</title>
+      <link>http://uk960214.github.io/posts/til/21-10-18/</link>
+      <pubDate>Tue, 19 Oct 2021 01:17:23 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-10-18/</guid>
+      <description>Source: JavaScript Algorithms and Data Structures Masterclass Frequency Counter  When counting frequency of iterable objects, avoid nested looping that results in O(n^2), by using objects or sets to collect values.
+ Example  Create a function named &amp;ldquo;same&amp;rdquo; that compares 2 arrays, and check if one array contains the squared values of the other, with matching frequencies
+ The Naive Solution  Use nested loop to check if squared value of current looping element exists.</description>
+    </item>
+    
     <item>
       <title>[JavaScript] Sending AJAX Request to Django Backend for Spotify Music Search</title>
       <link>http://uk960214.github.io/posts/til/21-08-08/</link>

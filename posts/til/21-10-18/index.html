@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJHZ868TNQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KJHZ868TNQ');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Problem Solving Patterns - Koowoy Devs</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KJHZ868TNQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Koowoy Devs" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Koowoy Devs</div>
+					<div class="logo__tagline">Koowoy Develops Yet Again Today</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Problem Solving Patterns</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Koowoy</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-10-19T01:17:23&#43;09:00">2021-10-19</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/til/" rel="category">TIL</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h3 id="source-javascript-algorithms-and-data-structures-masterclasshttpswwwudemycomcoursejs-algorithms-and-data-structures-masterclass">Source: <a href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/">JavaScript Algorithms and Data Structures Masterclass</a></h3>
+<h1 id="frequency-counter">Frequency Counter</h1>
+<blockquote>
+<p>When counting frequency of iterable objects, avoid nested looping that results in O(n^2), by using objects or sets to collect values.</p>
+</blockquote>
+<h2 id="example">Example</h2>
+<blockquote>
+<p>Create a function named &ldquo;same&rdquo; that compares 2 arrays, and check if one array contains the squared values of the other, with matching frequencies</p>
+</blockquote>
+<h3 id="the-naive-solution">The Naive Solution</h3>
+<blockquote>
+<p>Use nested loop to check if squared value of current looping element exists.</p>
+</blockquote>
+<p><strong>Result: O(n^2)</strong></p>
+<h3 id="refactoring-using-frequency-counter">Refactoring using Frequency Counter</h3>
+<blockquote>
+<p>Use multiple loops instead of nested loops, create objects of each array, with key of elements of array, and value of frequency.</p>
+</blockquote>
+<p><strong>Result: O(3n) === O(n)</strong></p>
+<h3 id="anagram">Anagram</h3>
+<blockquote>
+<p>Create a function that validates if a string is an anagram of the other.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#75715e">// My initial solution
+</span><span style="color:#75715e">// Use same pattern as above
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">validAnagram</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>) =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">str1</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">str2</span>.<span style="color:#a6e22e">length</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    };
+
+    <span style="color:#a6e22e">str1Obj</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#a6e22e">str2Obj</span> <span style="color:#f92672">=</span> {};
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str1</span>) {
+        <span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    };
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str2</span>) {
+        <span style="color:#a6e22e">str2Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str2Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    };
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">str1Obj</span>) {
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">str2Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">||</span> <span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">!==</span> <span style="color:#a6e22e">str2Obj</span>[<span style="color:#a6e22e">s</span>]) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+        };
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+}
+
+<span style="color:#75715e">// Model Solution
+</span><span style="color:#75715e">// Create 1 object =&gt; loop over 2nd string and subtract from obj1, checking if 0
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">validAnagram</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str1</span>, <span style="color:#a6e22e">str2</span>) =&gt; {
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">str1</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">str2</span>.<span style="color:#a6e22e">length</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    }
+
+    <span style="color:#a6e22e">str1Obj</span> <span style="color:#f92672">=</span> {}
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str1</span>) {
+        <span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">s</span>] <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    }
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">c</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">str2</span>) {
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">c</span>] <span style="color:#f92672">||</span> <span style="color:#a6e22e">str1Obj</span>[<span style="color:#a6e22e">c</span>] <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">strObj</span>[<span style="color:#a6e22e">c</span>]<span style="color:#f92672">--</span>;
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+}
+
+</code></pre></div><h1 id="multiple-pointers">Multiple Pointers</h1>
+<blockquote>
+<p>When searching for a pair that meets a certain condition, use two references(pointers) and work towards the middle</p>
+</blockquote>
+<h2 id="example-1">Example</h2>
+<blockquote>
+<p>From a sorted Array, find the first pair of which the sum of the pair equals 0.</p>
+</blockquote>
+<h3 id="naive-solution">Naive Solution</h3>
+<blockquote>
+<p>Create a nested loop for each element of the loop, check each sum</p>
+</blockquote>
+<p><strong>Result: O(n^2)</strong></p>
+<h3 id="refactored-with-multiple-pointer">Refactored with Multiple Pointer</h3>
+<blockquote>
+<p>Start with two indicators that is located on each end of the array. While the left pointer is smaller than the right pointer, if the sum of the two is positive move right pointer -1, and if negative move left pointer + 1. If this is 0, that is the answer.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">countUniqueValues</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arr</span>) =&gt; {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {  <span style="color:#75715e">// although j is supposed to end at length - 1, this results in one final increment of i without actually having to do so
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">!==</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>]) {
+            <span style="color:#a6e22e">arr</span>[<span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>]
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">i</span>
+}
+</code></pre></div><h1 id="sliding-window">Sliding Window</h1>
+<blockquote>
+<p>Used when dealing with a subset of data that is continuous.</p>
+</blockquote>
+<h2 id="example-2">Example</h2>
+<blockquote>
+<p>Create a function that accepts an array and a number. Find the largest sum of the subset with the length of the given number in the array.</p>
+</blockquote>
+<h3 id="naive-solution-1">Naive Solution</h3>
+<blockquote>
+<p>Using nested loop, for each element of the array, get sum of each subset, compare it to the current max value.
+<strong>Result: O(n^2)</strong></p>
+</blockquote>
+<h3 id="refactoring-with-sliding-window">Refactoring with Sliding Window</h3>
+<blockquote>
+<p>Instead of the nested loop, move the subset as a whole by subtracting the very first element and adding the upcoming element.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">maxSubarraySum</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">num</span>) {
+	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">maxSum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tempSum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">num</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+
+    <span style="color:#75715e">// Get sum of first subset
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">num</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+		<span style="color:#a6e22e">maxSum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>];
+	}
+	<span style="color:#a6e22e">tempSum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">maxSum</span>;
+
+    <span style="color:#75715e">// Loop array, subtract the current first number, add next number
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+		<span style="color:#a6e22e">tempSum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tempSum</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">-</span><span style="color:#a6e22e">num</span>] <span style="color:#f92672">+</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>];
+		<span style="color:#a6e22e">maxSum</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">maxSum</span>, <span style="color:#a6e22e">tempSum</span>);
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">maxSum</span>;
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/javascript/" rel="tag">JavaScript</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/algorithm/" rel="tag">Algorithm</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/problem-solving/" rel="tag">Problem-Solving</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/counter/" rel="tag">Counter</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/multiple-pointer/" rel="tag">Multiple Pointer</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/til/21-08-08/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">[JavaScript] Sending AJAX Request to Django Backend for Spotify Music Search</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "koowoydevs" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Koowoy.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
