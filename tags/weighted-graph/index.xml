@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weighted Graph on Koowoy Devs</title>
+    <link>http://uk960214.github.io/tags/weighted-graph/</link>
+    <description>Recent content in Weighted Graph on Koowoy Devs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Nov 2021 13:58:09 +0900</lastBuildDate><atom:link href="http://uk960214.github.io/tags/weighted-graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dijkstra&#39;s Algorithm on JavaScript</title>
+      <link>http://uk960214.github.io/posts/til/21-11-05/</link>
+      <pubDate>Fri, 05 Nov 2021 13:58:09 +0900</pubDate>
+      
+      <guid>http://uk960214.github.io/posts/til/21-11-05/</guid>
+      <description>Definition of Dijkstra&amp;rsquo;s Algorithm  Algorithm to calculate the shortest path from one vertex of a graph to another vertex, using a priority array
+ Input and Output  Input: starting vertex, ending vertex Output: an array of vertices consisting of the shortest path from start to end in order  Logic 1. To begin with, 4 variables need to be initialized.  distances object: used to store the shortest distance from start to each vertex previous object: used to store the previous vertex of the path shortest to the current vertex priority queue: used to store vertices to pay visits to, in ascending order of distances from the starting vertex to the current vertex, this will be used for looping through the graph path: an array for storing path info at the end for returning the path  2.</description>
+    </item>
+    
+  </channel>
+</rss>
